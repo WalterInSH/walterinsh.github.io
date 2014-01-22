@@ -1,14 +1,30 @@
+.main_ele{
+	min-height: 500px;
+}
+
 .first_ele{
   margin-top: 70px;
 }
 
-#posts .p_title{
-  font-size: 16px;
+footer{
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin-top: 100px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
 }
 
-
-#posts .p_date{
-  margin-left: 15px;
-  font-size: 12px;
+footer img{
+	vertical-align:middle;
+	width: 100px;
+	height: 30px;
 }
 
+.footer_right{
+	text-align: right;
+	margin-top: 20px;
+}
+
+.footer_info{
+	margin-bottom: 5px;
+}
