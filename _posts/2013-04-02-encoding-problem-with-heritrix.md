@@ -11,6 +11,8 @@ title: Encoding problem with heritrix
  
 heritrx 3 首先会去根据服务器返回的Content-type去获得编码。
 
+<img src="/image/response_info.png">
+
 在此我真的想感叹，老外的世界里只有ISO-8859-1吗！
 这个时候我们可以根据HTML的meta信息来判断，例如
  
