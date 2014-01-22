@@ -1,0 +1,9 @@
+#posts .p_title{
+  font-size: 16px;
+}
+
+
+#posts .p_date{
+  margin-left: 15px;
+  font-size: 12px;
+}
