@@ -1,9 +1,43 @@
-#posts .p_title{
+#posts .col-md-10{
+  font-size: 25px;
+  height: 60px;
+  padding-left: 30px;
+}
+
+#posts h2{
+	color: #FFF;
+}
+#posts .col-md-2{
   font-size: 16px;
+  border-right: 1px solid;
+  height: 60px;
+  color:#FFF;
 }
 
-
-#posts .p_date{
-  margin-left: 15px;
-  font-size: 12px;
+#posts .big_bar{
+	padding: 5px 5px 5px 5px;
+	border-radius:10px;
+	margin-left: 20px;
+	margin-top: 20px;
+	height: 70px;
+	width: 800px;
+	line-height: 60px;
+  	vertical-align: middle;
 }
+
+.c_lightblue{
+	background-color: #1E79CC;
+}
+
+#posts a:link {
+	color:#FFF;
+}      /* unvisited link */
+#posts a:visited {
+	color:#FFF;
+}  /* visited link */
+#posts a:hover {
+	color:#FFF;
+}  /* mouse over link */
+#posts a:active {
+	color:#FFF;
+}  /* selected link */
