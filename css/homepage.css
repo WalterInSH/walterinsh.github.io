@@ -4,9 +4,6 @@
   padding-left: 30px;
 }
 
-#posts h2{
-	color: #FFF;
-}
 #posts .col-md-2{
   font-size: 16px;
   border-right: 1px solid;
@@ -25,9 +22,6 @@
   	vertical-align: middle;
 }
 
-.c_lightblue{
-	background-color: #1E79CC;
-}
 
 #posts a:link {
 	color:#FFF;

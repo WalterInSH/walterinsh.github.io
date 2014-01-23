@@ -1,4 +1,4 @@
-var big_bar_color = ['AA7BF0','9B43F4','8E0FF4','7B3CBD'];
+var big_bar_color = ['7B3CBD','8E0FF4','9B43F4','AA7BF0'];
 
 $(function(){
 	$("#posts>.big_bar").each(function(index){
