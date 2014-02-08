@@ -1,3 +1,32 @@
-.title{
-	
+#blog_content{
+	margin-top: 10px;
+	font-size: 18px;
+}
+
+#blog_content table{
+	border: 1px solid #ddd;
+	border-collapse: collapse;
+}
+
+#blog_content td{
+	border: 1px solid #ddd;
+	border-collapse: collapse;
+	padding: 5px;
+}
+
+#blog_content th{
+	border: 1px solid #ddd;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+
+#blog_content blockquote p{
+	font-size: 13px;
+	font-style: italic;
+}
+
+#blog_content blockquote table{
+	font-size: 13px;
+	font-style: italic;
 }
