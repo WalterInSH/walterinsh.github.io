@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Encoding problem with heritrix
+title: Heritrix解决中文乱码
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: A useful IP database
+title: 使用现成的IP地址库
 ---
 
 现在很多应用都是用纯真地址库，如果是要求不高的应用，也可以尝试使用一下MaxMind，个人感觉够用了，但是服务是在国外，访问可能时间长一点。

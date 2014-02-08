@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: How does spring mvc maps http request to controller
+title: Spring MVC 如何将RequestMapping Annotation 转为Url映射的
 ---
 
  本来是想研究Annotation的，Java有APT，但是感觉Spring用的肯定不是APT，就顺手看了Spring MVC处理annotation的处理过程，从RequestMapping开始入手，大致分享一下Spring处理Annotation的过程。其他大致也差不多吧（我猜想）。
