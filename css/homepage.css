@@ -1,38 +1,34 @@
-#posts{
-	border-radius:10px;
-}
-
 #posts .col-md-10{
-  font-size: 25px;
-  height: 70px;
-  padding-left: 30px;
+  font-size: 15px;
+  height: 30px;
+  padding-left: 10px;
 }
 
 #posts .col-md-2{
-  font-size: 16px;
-  border-right: 1px solid;
-  height: 70px;
-  color:#FFF;
+  font-size: 13px;
+  height: 30px;
+  color:#ccc;
 }
 
 #posts .big_bar{
+	padding: 0px 5px 0px 5px;
 	margin-left: 20px;
-	height: 70px;
+	margin-top: 3px;
+	height: 20px;
 	width: 800px;
-	line-height: 70px;
+	line-height: 20px;
   	vertical-align: middle;
-  	background-color: #AA7BF0;
 }
 
 #posts a:link {
-	color:#FFF;
+	color:#blue;
 }      /* unvisited link */
 #posts a:visited {
-	color:#FFF;
+	color:#blue;
 }  /* visited link */
 #posts a:hover {
-	color:#FFF;
+	color:#blue;
 }  /* mouse over link */
 #posts a:active {
-	color:#FFF;
+	color:#blue;
 }  /* selected link */

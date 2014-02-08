@@ -1,15 +1,6 @@
-/*var big_bar_color = ['7B3CBD','8E0FF4','9B43F4','AA7BF0'];
+var width = $("#posts_stat").width();
 
-$(function(){
-	$("#posts>.big_bar").each(function(index){
-		console.log(index);
-		$(this).css({"background-color":"#"+big_bar_color[index]});
-	});
-});*/
-
-var width = $("#posts").width();
-
-var chart = d3.select("#posts svg")
+var chart = d3.select("#posts_stat svg")
 	.attr("width",width)
 	.attr("height",500);
 
@@ -21,3 +12,5 @@ var bar = chart.selectAll("g")
 bar.append("rect")
     .attr("width", 3)
     .attr("height", 40);
+});*/
+
