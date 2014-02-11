@@ -32,3 +32,15 @@
 #posts a:active {
 	color:#blue;
 }  /* selected link */
+
+#slider .carousel{
+	padding: 0px;
+}
+
+#slider img{
+	width:auto;
+	-webkit-filter: blur(3px); /* Chrome, Opera */
+       -moz-filter: blur(3px);
+        -ms-filter: blur(3px);    
+            filter: blur(3px); 
+}
