@@ -2,12 +2,6 @@
 layout: homepage
 title: WalterInSH home page
 ---
-	<script type="text/javascript">
-	    var blogData = new Array();
-	    {% for post in site.posts%}
-	        blogData.push({"date":"{{ post.date | date_to_string }}","title":"{{ post.title }}","time":"{{ post.date | date: "%Y-%m-%d" }}"});
-	    {% endfor %}
-	</script>
 	<div id="slider" class="container">
 		<div id="selected_image_slider" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
@@ -48,8 +42,3 @@ title: WalterInSH home page
 		{% endfor %}
 		</ul>
 	</div>
-<!-- 
-	
-	<div id="posts_stat" class="container">
-		<svg></svg>
-	</div> -->
