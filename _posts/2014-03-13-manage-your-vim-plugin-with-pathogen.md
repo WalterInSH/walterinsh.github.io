@@ -32,10 +32,12 @@ execute pathogen#infect()
 将上面的代码加入 ~/.vimrc 文件,如果没有这个文件,就新建一个.
 
 D.将.vim目录作为一个git目录
+
 ```
 cd ~/.vim
 git init
 ```
+
 你可以将这个目录push到github或者别的代码托管服务上,这样,你就可以快速的将已有的配置部署在别的机器上
 
 安装管理插件
