@@ -40,11 +40,14 @@ git init
 
 安装管理插件
 ===
+
 A.安装插件, 我们以安装 [sensible](https://github.com/tpope/vim-sensible) 为例
+
 ```
 cd ~/.vim
 git submodule add git://github.com/tpope/vim-sensible.git bundle/sensible
 ```
+
 这样子就安装好了,有些插件要求进一步配置
 
 B.一次更新所有插件
@@ -59,6 +62,7 @@ git commit -m "update submodules"
 
 C.删除某一个插件
 删除 .gitmodules 中该插件的配置然后
+
 ```
 rm -rf bundle/plugin_name
 ```
