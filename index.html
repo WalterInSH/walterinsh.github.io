@@ -2,43 +2,27 @@
 layout: homepage
 title: WalterInSH home page
 ---
-	<div id="slider" class="container">
-		<div id="selected_image_slider" class="carousel slide" data-ride="carousel">
-			<ol class="carousel-indicators">
-	            <li data-target="#selected_image_slider" data-slide-to="0" class="active"></li>
-	            <li data-target="#selected_image_slider" data-slide-to="1"></li>
-	        </ol>
+<div id="posts" class="container">
+    <h3>New Posts</h3>
+    {% for post in site.posts limit:5%}
+    <div class="row big_bar">
+        <span class="col-md-2">{{ post.date | date_to_string }}</span>
+        <span class="col-md-10"><a href="{{ post.url }}">{{ post.title }}</a></span></div>
+    {% endfor %}
+    </ul>
+</div>
 
-		  	<div class="carousel-inner">
-	            <div class="item active">
-	                <img src="/image/selected/1.jpg" alt="">
-	                <div class="container">
-	                    <div class="carousel-caption">
-	                        <h1>Know what I did.&nbsp;&amp;&nbsp;Know what I will do</h1>
-	                        <p><a class="btn btn-large btn-primary" href="/profile.html">Read my profile</a></p>
-	                    </div>
-	                </div>
-	            </div>
-	            <div class="item">
-	                <img src="/image/selected/2.jpg" alt="">
-	                <div class="container">
-	                    <div class="carousel-caption">
-	                        <h1>I have something share with you</h1>
-	                        <p><a class="btn btn-large btn-primary" href="/blogs.html">Read my blogs</a></p>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-
-			<a class="left carousel-control" href="#selected_image_slider" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-	        <a class="right carousel-control" href="#selected_image_slider" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-		</div>
-	</div>
-
-	<div id="posts" class="container">
-		<h3>Blog Posts</h3>
-		{% for post in site.posts limit:5%}
-		  <div class="row big_bar"><span class="col-md-2">{{ post.date | date_to_string }}</span><span class="col-md-10"><a href="{{ post.url }}">{{ post.title }}</a></span></div>
-		{% endfor %}
-		</ul>
-	</div>
+<div class="container items">
+    <div class="item">
+        <p>Viewing my codes is a shortcut to know me. I host project on GitHub what is a awesome website.</p>
+        <a href="https://github.com/WalterInSH" class="btn btn-primary">Visit GitHub</a>
+    </div>
+    <div class="item">
+        <p>I've got experiences in programing. I'd like to share these with you.</p>
+        <a type="button" class="btn btn-primary">Read my blogs</a>
+    </div>
+    <div class="item">
+        <p>You have an excellent idea of building a blog or want to report a issue about this site?</p>
+        <a href="https://github.com/WalterInSH/walterinsh.github.io/issues" class="btn btn-primary">Yes!</a>
+    </div>
+</div>
