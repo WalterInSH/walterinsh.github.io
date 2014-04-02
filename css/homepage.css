@@ -37,6 +37,10 @@
     margin-top: 100px;
 }
 
+#blog_tags{
+    height: 70px;
+}
+
 #blog_tags .tag{
     border: solid gray 1px;
     margin-left: 3%;

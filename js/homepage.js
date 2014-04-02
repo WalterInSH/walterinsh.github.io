@@ -1,7 +1,8 @@
 $.get( "/tags.json", function( data ) {
     // add tags
     $.each(data, function (index,tag) {
-        $("#blog_tags").append("<span class=\"tag\">" + tag + "</span>");
+        var tag_content = "<span class=\"tag\">" + tag + "</span>";
+        $(tag_content).hide().appendTo("#blog_tags").fadeIn(1500);
     });
 
     //bind click event onto tags
