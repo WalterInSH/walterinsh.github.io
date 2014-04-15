@@ -25,8 +25,13 @@
 	font-size: 13px;
 	font-style: italic;
 }
+
 #blog_content p {
     text-indent: 35px;
+}
+
+#blog_content table {
+    margin-left: 35px;
 }
 
 #blog_content blockquote table{

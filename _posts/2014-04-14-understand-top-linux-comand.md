@@ -29,3 +29,31 @@ linux内核正在管理的任务数,先上图
 </a>
 
 这张示意图展示了linux是如何管理Task的生命周期的, tasks后面显示的就是不同状态的task有多少.[延伸阅读](http://www.linuxuser.co.uk/features/life-cycle-of-a-process)
+
+### CPU
+man中解释如下,还是非常简单清楚的,随后补充一些迷惑的地方
+
+| Name          | Description                     |
+| ------------- | --------------------------------|
+| us |  time running un-niced user processes      |
+| sy |  time running kernel processes             |
+| ni |  time running niced user processes         |
+| id |  idle cpu time (or) CPU time spent idle    |
+| wa |  time waiting for I/O completion           |
+| hi |  time spent servicing hardware interrupts  |
+| si |  time spent servicing software interrupts  |
+| st |  time stolen from this vm by the hypervisor|
+
+un-niced : nice值为0的进程,nice值越高,被cpu执行的机会越少.nice值的范围是 -20 ~ 19
+
+如果us或者sy长时间占去了CPU时间,首先应该定位是哪个进程占用的,这个从下面的列表中可以得出
+
+对于wa过高,最后我会给出一个便利的工具排查问题,你也可以通过[这篇blog](http://bencane.com/2012/08/06/troubleshooting-high-io-wait-in-linux/)排除.
+
+关于处理器中断不是本文涉及的部分,可以参考[这里](http://unix.stackexchange.com/a/18023)
+
+st是关于虚拟机的指标,出问题的情况不多吧.详细信息见[这里](http://blog.scoutapp.com/articles/2013/07/25/understanding-cpu-steal-time-when-should-you-be-worried)
+
+### KiB Mem
+
+### KiB Swap
