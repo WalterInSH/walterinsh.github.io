@@ -64,6 +64,33 @@ Swap 的使用情况. 总共的,已用的和未用的量.
 
 为了提高硬盘操作的速度,会用swap缓存硬盘的文件. cache 就是缓存的这部分数据. Linux会帮你管理这部分. 与buffer比较, cache缓存的是页,buffer是块.
 
+### 进程列表
+
+| Name          | Description                         |
+| ------------- | ------------------------------------|
+|PID            | 进程号                               |
+|USER           | 属于哪个用户                          |
+|PR             | 优先级                               |
+|NI             | nice值                             |
+|VIRT           | 该进程占用的的虚拟内存大小             |
+|RES            | 使用物理内存的大小                    |
+|SHR            | 占用的共享内存大小                    |
+|S              | 进程状态                             |
+|%CPU           | 占用率                               |
+|%MEM           | RES 的占用率                         |
+|TIME+          | 该进程从启动到现在,占用CPU时间总长     |
+|COMMAND        | 命令是什么                           |
+
+详细介绍可以看man top. 这里简单补充一点可能迷惑的地方.
+
+A. nice value 和 priority的区别
+
+nice value 是用户为进程指定的优先级, 但是priority是系统运行时给定的. 不同linux版本可能对priority的计算方法不一样,一般来说
+
+```
+priority = nice_value + 20
+```
+
 
 ---
 
