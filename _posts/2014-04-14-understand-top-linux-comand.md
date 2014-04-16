@@ -55,5 +55,19 @@ un-niced : nice值为0的进程,nice值越高,被cpu执行的机会越少.nice�
 st是关于虚拟机的指标,出问题的情况不多吧.详细信息见[这里](http://blog.scoutapp.com/articles/2013/07/25/understanding-cpu-steal-time-when-should-you-be-worried)
 
 ### KiB Mem
+RAM 的使用情况. 总共的,已用的和未用的量.
+
+为了提高硬盘操作的速度,会用RAM缓存硬盘的数据. Buffers 就是缓存的这部分信息的元信息. Linux会帮你管理这部分.
 
 ### KiB Swap
+Swap 的使用情况. 总共的,已用的和未用的量.
+
+为了提高硬盘操作的速度,会用swap缓存硬盘的文件. cache 就是缓存的这部分数据. Linux会帮你管理这部分. 与buffer比较, cache缓存的是页,buffer是块.
+
+
+
+
+
+
+---
+If I am wrong, pls feel free to correct me, thx:)
