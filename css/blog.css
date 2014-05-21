@@ -1,6 +1,7 @@
 #blog_content{
 	margin-top: 10px;
 	font-size: 18px;
+        width: 920px;
 }
 
 #blog_content table{
@@ -26,12 +27,12 @@
 	font-style: italic;
 }
 
-#blog_content p {
-    text-indent: 35px;
-}
-
 #blog_content table {
     margin-left: 35px;
+}
+
+#blog_content code {
+        margin-left: 35px;
 }
 
 #blog_content blockquote table{
