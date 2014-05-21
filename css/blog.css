@@ -1,7 +1,7 @@
 #blog_content{
 	margin-top: 10px;
 	font-size: 18px;
-        width: 920px;
+        width: 960px;
 }
 
 #blog_content table{
@@ -21,6 +21,9 @@
 	text-align: center;
 }
 
+#blog_content pre{
+    padding: 0px;
+}
 
 #blog_content blockquote p{
 	font-size: 13px;
@@ -29,10 +32,6 @@
 
 #blog_content table {
     margin-left: 35px;
-}
-
-#blog_content code {
-        margin-left: 35px;
 }
 
 #blog_content blockquote table{
