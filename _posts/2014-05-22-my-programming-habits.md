@@ -3,7 +3,7 @@ layout: blog
 title: 我的编程习惯
 ---
 
-A 不必要的判空  
+### 不必要的判空  
 2011年我入职一家公司,入职技术培训的是一个自以为很懂技术的副总,他给我们的开发标准中,特别强调了空指针
 的问题,要判空. 可以看出"判空"这个注意点有多么的深入人心广为流传. 很久以前我总是抱着"判了总比没判好"
 的思想, 到处判断一个返回值是否为null.  
@@ -26,7 +26,8 @@ does not have a session, creates one.
 
 这里无意穷举所有这种情况,更多的多看看注释和源码就知道了.
 
-B 当你初学编程,神坛上的谭浩强已经告诉你要给变量起一个见名知意的名字,也许还要给方法起个合适的名字.但是
+### 传对的参数  
+当你初学编程,神坛上的谭浩强已经告诉你要给变量起一个见名知意的名字,也许还要给方法起个合适的名字.但是
 他似乎没告诉你要传一个合适的参数进去.  
 假设一个方法,目的是检查session中的用户信息,怎么起名字呢? 参数怎么办呢?  
 checkOnlineUser似乎是个不错的名字,就这么定了.下面这个怎么样?
@@ -53,7 +54,8 @@ private void checkOnlineUser(User onlineUser) {
 }
 ```
 
-C 断言中的equals断言,是有顺序的,testng中actual在前expected在后,junit相反.
+### equals断言的可读性  
+断言中的equals断言,是有顺序的,testng中actual在前expected在后,junit相反.
 
 ```java
 // testng
@@ -74,7 +76,7 @@ org.testng.Assert.assertEquals(actual, 4);
 ```
 
 你是否是这样的思路:第一步得到a,再得到b,结果是a + b = actual,然后actual应该等于4.  
-还是这种思路:第一步得到a,再得到b,结果是a + b = actual,然后4应该等于我actual.
+还是这种思路:第一步得到a,再得到b,结果是a + b = actual,然后4应该等于actual.
 
 你会发现第一种读起来更通顺,思路更顺畅.没错,是感觉,没有科学依据.我问过很多人,也查了很多资料,发现很多
 人对第二种思路感到别扭.
@@ -85,7 +87,7 @@ org.testng.Assert.assertEquals(actual, 4);
 assertThat("test", anyOf(is("test2"), containsString("te")));
 ```
 
-D  用一个等宽,漂亮的字体
+###  用一个等宽,漂亮的字体
 >A monospaced font, also called a fixed-pitch, fixed-width or non-proportional
 font, is a font whose letters and characters each occupy the same amount of
 horizontal space.This contrasts with variable-width fonts, where the letters
