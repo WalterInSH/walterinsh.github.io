@@ -9,14 +9,16 @@ A 不必要的判空
 的思想, 到处判断一个返回值是否为null.  
 其实,很多时候都没必要.而这些没必要的代码,就浪费了你读代码的时间,增加了复杂程度,同时我坚信"没用的代码
 也是bug"  
-除了"一个标准的API如果返回值是集合时,不应该是null",还有很多常见的API实际上也是不需要判空的  
+除了"一个标准的API如果返回值是集合时,不应该是null",还有很多常见的API实际上也是不需要判空的
+
 ```java
 HttpSession session = request.getSession();
 
 if(session == null){
   throw new RuntimeException("session not found");
 }
-```  
+```
+
 从request中获取session的代码很常见,这里实际上是不需要判空的,以下是getSession的注释信息
 
 >Returns the current session associated with this request, or if the request
@@ -61,21 +63,24 @@ static public void assertEquals(String actual, String expected);
 static public void assertEquals(double expected, double actual);
 ```
 
-有病的处女座,这两个有什么区别?体会以下如下过程  
+有病的处女座,这两个有什么区别?体会以下如下过程
+
 ```java
 def a = stepOne();
 def b = stepTwo(a);
 def actual = a + b;
 
 org.testng.Assert.assertEquals(actual, 4);
-```  
+```
+
 你是否是这样的思路:第一步得到a,再得到b,结果是a + b = actual,然后actual应该等于4.  
 还是这种思路:第一步得到a,再得到b,结果是a + b = actual,然后4应该等于我actual.
 
 你会发现第一种读起来更通顺,思路更顺畅.没错,是感觉,没有科学依据.我问过很多人,也查了很多资料,发现很多
 人对第二种思路感到别扭.
 
-甚至还有一个框架为了测试可读性做了更多事情  
+甚至还有一个框架为了测试可读性做了更多事情
+
 ```java
 assertThat("test", anyOf(is("test2"), containsString("te")));
 ```
