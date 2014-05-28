@@ -11,22 +11,22 @@ http://pan.baidu.com/s/1mgoL4QO
 
 
 如果遇到如下报错,你应该升级libc  
-```shell
+{% highlight Bash shell scripts %}
 /usr/share/atom/atom: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.14' not found(required by /usr/share/atom/atom)
 /usr/share/atom/atom: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.14' not found(required by /usr/share/atom/libchromiumcontent.so)
 /usr/share/atom/atom: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.15' not found(required by /usr/share/atom/atom)
-```
+{% endhighlight %}
 
 首先在 /etc/apt/sources.list 文件中加入一行  
-```
+{% highlight Bash shell scripts %}
 deb http://ftp.us.debian.org/debian/ testing main contrib non-free
-```
+{% endhighlight %}
 
 然后执行  
-```
+{% highlight Bash shell scripts %}
 sudo apt-get update
 sudo apt-get install -t testing libc6
-```
+{% endhighlight %}
 
 安装结束后把 /etc/apt/sources.list 的那一行删掉
 

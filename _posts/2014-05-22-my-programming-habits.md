@@ -11,13 +11,13 @@ title: 我的编程习惯
 也是bug"  
 除了"一个标准的API如果返回值是集合时,不应该是null",还有很多常见的API实际上也是不需要判空的
 
-```java
+{% highlight java %}
 HttpSession session = request.getSession();
 
 if(session == null){
   throw new RuntimeException("session not found");
 }
-```
+{% endhighlight %}
 
 从request中获取session的代码很常见,这里实际上是不需要判空的,以下是getSession的注释信息
 
@@ -32,18 +32,18 @@ does not have a session, creates one.
 假设一个方法,目的是检查session中的用户信息,怎么起名字呢? 参数怎么办呢?  
 checkOnlineUser似乎是个不错的名字,就这么定了.下面这个怎么样?
 
-```java
+{% highlight java %}
 private void checkOnlineUser(HttpServletRequest request) {
   // Step one: Get user detail from request session
   // Step two: Check
 }
-```  
+{% endhighlight %}
 
 我感觉不够好,因为方法名是checkOnlineUser,从名字上来看怎么都要有个User吧.(鱼香肉丝就没有鱼啊)  
 虽然上面这个写法可以实现业务,但是总会给人一个参数和方法名无关的感觉.试着读下面的方法签名,是不是更顺口
 一点
 
-```java
+{% highlight java %}
 User onlineUser = getUserFromRequest(request);
 
 checkOnlineUser(onlineUser);
@@ -52,28 +52,28 @@ checkOnlineUser(onlineUser);
 private void checkOnlineUser(User onlineUser) {
   // The only step is checking user info
 }
-```
+{% endhighlight %}
 
 ### equals断言的可读性  
 断言中的equals断言,是有顺序的,testng中actual在前expected在后,junit相反.
 
-```java
+{% highlight java %}
 // testng
 static public void assertEquals(String actual, String expected);
 
 // junit
 static public void assertEquals(double expected, double actual);
-```
+{% endhighlight %}
 
 有病的处女座,这两个有什么区别?体会以下如下过程
 
-```java
+{% highlight groovy %}
 def a = stepOne();
 def b = stepTwo(a);
 def actual = a + b;
 
 org.testng.Assert.assertEquals(actual, 4);
-```
+{% endhighlight %}
 
 你是否是这样的思路:第一步得到a,再得到b,结果是a + b = actual,然后actual应该等于4.  
 还是这种思路:第一步得到a,再得到b,结果是a + b = actual,然后4应该等于actual.
@@ -83,9 +83,9 @@ org.testng.Assert.assertEquals(actual, 4);
 
 甚至还有一个框架为了测试可读性做了更多事情
 
-```java
+{% highlight java %}
 assertThat("test", anyOf(is("test2"), containsString("te")));
-```
+{% endhighlight %}
 
 ###  用一个等宽,漂亮的字体
 >A monospaced font, also called a fixed-pitch, fixed-width or non-proportional

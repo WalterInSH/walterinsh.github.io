@@ -4,27 +4,27 @@ title: Spring MVC 如何将RequestMapping Annotation 转为Url映射的
 ---
 
  本来是想研究Annotation的，Java有APT，但是感觉Spring用的肯定不是APT，就顺手看了Spring MVC处理annotation的处理过程，从RequestMapping开始入手，大致分享一下Spring处理Annotation的过程。其他大致也差不多吧（我猜想）。
- 
+
 Spring被加载时通过AbstractDetectingUrlHandlerMapping.java
 
-```
-/** 
- * Calls the {@link #detectHandlers()} method in addition to the 
- * superclass's initialization. 
+{% highlight java %}
+/**
+ * Calls the {@link #detectHandlers()} method in addition to the
+ * superclass's initialization.
  */  
 @Override  
 public void initApplicationContext() throws ApplicationContextException {  
     super.initApplicationContext();  
     detectHandlers();  
 }  
-  
-/** 
- * Register all handlers found in the current ApplicationContext. 
- * <p>The actual URL determination for a handler is up to the concrete 
- * {@link #determineUrlsForHandler(String)} implementation. A bean for 
- * which no such URLs could be determined is simply not considered a handler. 
- * @throws org.springframework.beans.BeansException if the handler couldn't be registered 
- * @see #determineUrlsForHandler(String) 
+
+/**
+ * Register all handlers found in the current ApplicationContext.
+ * <p>The actual URL determination for a handler is up to the concrete
+ * {@link #determineUrlsForHandler(String)} implementation. A bean for
+ * which no such URLs could be determined is simply not considered a handler.
+ * @throws org.springframework.beans.BeansException if the handler couldn't be registered
+ * @see #determineUrlsForHandler(String)
  */  
 protected void detectHandlers() throws BeansException {  
     if (logger.isDebugEnabled()) {  
@@ -33,7 +33,7 @@ protected void detectHandlers() throws BeansException {
     String[] beanNames = (this.detectHandlersInAncestorContexts ?  
             BeanFactoryUtils.beanNamesForTypeIncludingAncestors(getApplicationContext(), Object.class) :  
             getApplicationContext().getBeanNamesForType(Object.class));  
-  
+
     // Take any bean name that we can determine URLs for.  
     for (String beanName : beanNames) {  
         String[] urls = determineUrlsForHandler(beanName);  
@@ -48,13 +48,14 @@ protected void detectHandlers() throws BeansException {
         }  
     }  
 }  
-```
+{% endhighlight %}
+
  启动RequestMapping的分析和注册,主要看detectHandlers方法，其从Spring容器中获得了所有的Bean，然后读取其上的RequestMapping Annotation
 
-```
-/** 
-     * Checks for presence of the {@link org.springframework.web.bind.annotation.RequestMapping} 
-     * annotation on the handler class and on any of its methods. 
+{% highlight java %}
+/**
+     * Checks for presence of the {@link org.springframework.web.bind.annotation.RequestMapping}
+     * annotation on the handler class and on any of its methods.
      */  
     @Override  
     protected String[] determineUrlsForHandler(String beanName) {  
@@ -102,21 +103,22 @@ protected void detectHandlers() throws BeansException {
         else {  
             return null;  
         }  
-    } 
-``` 
+    }
+{% endhighlight %}
+
  就这样，RequestMapping Annotation的值就被拿到了，当然拿不到的说明不是Controller吧。其中还有对方法上的RequestMapping的获得。
 我们可以看到，在RequestMapping里的value，第一个“/”是可选的，因为这里做了判断。（当然，用过的人已经知道了）.
 接下来就是注册了，其实就是放在了
 
-```
+{% highlight java %}
 private final Map<String, Object> handlerMap = new LinkedHashMap<String, Object>();
 
-/** 
-     * Register the specified handler for the given URL paths. 
-     * @param urlPaths the URLs that the bean should be mapped to 
-     * @param beanName the name of the handler bean 
-     * @throws BeansException if the handler couldn't be registered 
-     * @throws IllegalStateException if there is a conflicting handler registered 
+/**
+     * Register the specified handler for the given URL paths.
+     * @param urlPaths the URLs that the bean should be mapped to
+     * @param beanName the name of the handler bean
+     * @throws BeansException if the handler couldn't be registered
+     * @throws IllegalStateException if there is a conflicting handler registered
      */  
     protected void registerHandler(String[] urlPaths, String beanName) throws BeansException, IllegalStateException {  
         Assert.notNull(urlPaths, "URL path array must not be null");  
@@ -124,20 +126,20 @@ private final Map<String, Object> handlerMap = new LinkedHashMap<String, Object>
             registerHandler(urlPath, beanName);  
         }  
     }  
-  
-    /** 
-     * Register the specified handler for the given URL path. 
-     * @param urlPath the URL the bean should be mapped to 
-     * @param handler the handler instance or handler bean name String 
-     * (a bean name will automatically be resolved into the corresponding handler bean) 
-     * @throws BeansException if the handler couldn't be registered 
-     * @throws IllegalStateException if there is a conflicting handler registered 
+
+    /**
+     * Register the specified handler for the given URL path.
+     * @param urlPath the URL the bean should be mapped to
+     * @param handler the handler instance or handler bean name String
+     * (a bean name will automatically be resolved into the corresponding handler bean)
+     * @throws BeansException if the handler couldn't be registered
+     * @throws IllegalStateException if there is a conflicting handler registered
      */  
     protected void registerHandler(String urlPath, Object handler) throws BeansException, IllegalStateException {  
         Assert.notNull(urlPath, "URL path must not be null");  
         Assert.notNull(handler, "Handler object must not be null");  
         Object resolvedHandler = handler;  
-  
+
         // Eagerly resolve handler if referencing singleton via name.  
         if (!this.lazyInitHandlers && handler instanceof String) {  
             String handlerName = (String) handler;  
@@ -145,7 +147,7 @@ private final Map<String, Object> handlerMap = new LinkedHashMap<String, Object>
                 resolvedHandler = getApplicationContext().getBean(handlerName);  
             }  
         }  
-  
+
         Object mappedHandler = this.handlerMap.get(urlPath);  
         if (mappedHandler != null) {  
             if (mappedHandler != resolvedHandler) {  
@@ -175,6 +177,6 @@ private final Map<String, Object> handlerMap = new LinkedHashMap<String, Object>
             }  
         }  
     }  
-``` 
+{% endhighlight %}
 至此，RequestMapping就将Url和Bean联系起来了。
 之后会更进一步学习Spring源码，欢迎支出错误和提出意见

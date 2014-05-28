@@ -87,9 +87,8 @@ A. nice value 和 priority的区别
 
 nice value 是用户为进程指定的优先级, 但是priority是系统运行时给定的. 不同linux版本可能对priority的计算方法不一样,一般来说
 
-```
 priority = nice_value + 20
-```
+
 
 
 ---
