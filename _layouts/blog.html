@@ -4,10 +4,10 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>WalterInSH {{ page.title }}</title>
   <meta name="author" content="WalterInSH" />
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/commons.css">
   <link rel="stylesheet" href="/css/blog.css">
-  <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/obsidian.min.css">
+  <link rel="stylesheet" href="/css/obsidian.min.css">
 </head>
 <body>
 
@@ -31,7 +31,7 @@
 	    </div>
 	  </div>
 	</div>
-	  
+
 	<div class="container first_ele main_ele">
 		<div class="title">{{ title }}</div>
 		<div id="blog_content">{{ content }}</div>
@@ -43,7 +43,7 @@
 <script type="text/javascript">
     $LAB.script("/js/jquery-2.1.0.js").wait()
         .script("/js/bootstrap.min.js")
-        .script("http://yandex.st/highlightjs/8.0/highlight.min.js")
+        .script("/js/highlight.min.js")
         .wait(function(){
             hljs.initHighlightingOnLoad();
         });
