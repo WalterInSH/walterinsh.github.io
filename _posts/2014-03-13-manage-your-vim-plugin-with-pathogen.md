@@ -12,20 +12,20 @@ Vim 插件可以加快我们在Vim中编辑的效率,实现快速定位到某个
 
 A.安装git
 
-{% highlight Bash shell scripts %}
+{% highlight Bash shell scripts linenos%}
 apt-get install git
 {% endhighlight %}
 
 B.安装 pathogen
 
-{% highlight Bash shell scripts %}
+{% highlight Bash shell scripts linenos%}
 mkdir -p ~/.vim/autoload ~/.vim/bundle;
 curl -Sso ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim
 {% endhighlight %}
 
 C.配置pathogen
 
-{% highlight Bash shell scripts %}
+{% highlight Bash shell scripts linenos%}
 execute pathogen#infect()
 {% endhighlight %}
 
@@ -33,7 +33,7 @@ execute pathogen#infect()
 
 D.将.vim目录作为一个git目录
 
-{% highlight Bash shell scripts %}
+{% highlight Bash shell scripts linenos%}
 cd ~/.vim
 git init
 {% endhighlight %}
@@ -45,7 +45,7 @@ git init
 
 A.安装插件, 我们以安装 [sensible](https://github.com/tpope/vim-sensible) 为例
 
-{% highlight Bash shell scripts %}
+{% highlight Bash shell scripts linenos%}
 cd ~/.vim
 git submodule add git://github.com/tpope/vim-sensible.git bundle/sensible
 {% endhighlight %}
@@ -54,7 +54,7 @@ git submodule add git://github.com/tpope/vim-sensible.git bundle/sensible
 
 B.一次更新所有插件
 
-{% highlight Bash shell scripts %}
+{% highlight Bash shell scripts linenos%}
 cd ~/.vim
 git submodule foreach git pull origin master
 git add -A
@@ -65,6 +65,6 @@ git commit -m "update submodules"
 C.删除某一个插件
 删除 .gitmodules 中该插件的配置然后
 
-{% highlight Bash shell scripts %}
+{% highlight Bash shell scripts linenos%}
 rm -rf bundle/plugin_name
 {% endhighlight %}

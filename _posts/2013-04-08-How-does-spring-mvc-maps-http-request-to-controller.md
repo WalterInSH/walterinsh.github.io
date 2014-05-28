@@ -7,7 +7,7 @@ title: Spring MVC 如何将RequestMapping Annotation 转为Url映射的
 
 Spring被加载时通过AbstractDetectingUrlHandlerMapping.java
 
-{% highlight java %}
+{% highlight java linenos%}
 /**
  * Calls the {@link #detectHandlers()} method in addition to the
  * superclass's initialization.
@@ -52,7 +52,7 @@ protected void detectHandlers() throws BeansException {
 
  启动RequestMapping的分析和注册,主要看detectHandlers方法，其从Spring容器中获得了所有的Bean，然后读取其上的RequestMapping Annotation
 
-{% highlight java %}
+{% highlight java linenos%}
 /**
      * Checks for presence of the {@link org.springframework.web.bind.annotation.RequestMapping}
      * annotation on the handler class and on any of its methods.
@@ -110,7 +110,7 @@ protected void detectHandlers() throws BeansException {
 我们可以看到，在RequestMapping里的value，第一个“/”是可选的，因为这里做了判断。（当然，用过的人已经知道了）.
 接下来就是注册了，其实就是放在了
 
-{% highlight java %}
+{% highlight java linenos%}
 private final Map<String, Object> handlerMap = new LinkedHashMap<String, Object>();
 
 /**
