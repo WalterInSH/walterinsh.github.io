@@ -4,7 +4,7 @@ title: 我的编程习惯
 ---
 
 2011年以前,我眼中的整洁代码仅仅是该缩进的地方缩进.自从读了[编写可读代码的艺术](http://www.amazon.cn/dp/B008B4DTG4)
-这本书之后,里面介绍了如何写出优美可读的代码(不针对某种语言).里面印象比较深的大至有"方法拆分","见名知意",
+这本书之后有了新的认识,里面介绍了如何写出优美可读的代码(不针对某种语言).里面印象比较深的大至有"方法拆分","见名知意",
 "行内注释","代码风格","将自己想象成一个读者","先写注释再写代码"等思想.受益匪浅.
 
 本文分享一些该书中没有的东西,仅仅是自己的体会.
@@ -34,8 +34,7 @@ does not have a session, creates one.
 这里无意穷举所有这种情况,更多的多看看注释和源码就知道了.
 
 ### 传参  
-当你初学编程,神坛上的谭浩强已经告诉你要给变量起一个见名知意的名字,也许还要给方法起个合适的名字.但是
-他似乎没告诉你要传一个合适的参数进去.  
+当你初学编程,神坛上的谭浩强已经告诉你要给变量和方法起个合适的名字.但是他似乎没告诉你要传一个合适的参数进去.  
 假设一个方法,目的是检查session中的用户信息,怎么起名字呢? 参数怎么办呢?  
 checkOnlineUser似乎是个不错的名字,就这么定了.下面这个怎么样?
 
@@ -97,6 +96,7 @@ assertThat("test", anyOf(is("test2"), containsString("te")));
 
 ###  用一个等宽,漂亮的字体  
 你无法控制别人用什么字体看你的代码,但是你能控制你用什么字体看自己的代码. 试试等宽字体  
+
 >A monospaced font, also called a fixed-pitch, fixed-width or non-proportional
 font, is a font whose letters and characters each occupy the same amount of
 horizontal space.This contrasts with variable-width fonts, where the letters
