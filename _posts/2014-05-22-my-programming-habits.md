@@ -1,6 +1,6 @@
 ---
 layout: blog
-title:
+title: 我的编程习惯
 ---
 
 A 不必要的判空  
