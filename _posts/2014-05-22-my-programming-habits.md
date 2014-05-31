@@ -15,7 +15,7 @@ title: 我的编程习惯
 2011年我入职一家公司,入职技术培训的是一个自以为很懂技术的副总,他给我们的开发标准中,特别强调了空指针
 的问题,要判空. 可以看出"判空"这个注意点有多么的深入人心广为流传. 很久以前我总是抱着"判了总比没判好"
 的思想, 到处判断一个返回值是否为null.  
-其实,很多时候都没必要.而这些没必要的代码,就浪费了你读代码的时间,增加了复杂程度,同时我坚信"没用的代码也是bug"  
+其实,很多时候都没必要.而这些没必要的代码,就浪费了你读代码的时间,增加了复杂程度,同时我坚信"没用的代码也是bug".  
 除了"一个标准的API,如果返回值是集合时,不应该是null",还有很多常见的API实际上也是不需要判空的
 
 {% highlight java linenos%}
@@ -31,7 +31,9 @@ if(session == null){
 >Returns the current session associated with this request, or if the request
 does not have a session, creates one.
 
-这里无意穷举所有这种情况,更多的多看看注释和源码就知道了.
+我曾见过一个实习生在为一名高级工程师做完code review后指出有段代码是没有用的,却被反问“它报错了吗？
+没报错不就完了”.  
+往往,我们纵容那些没有用的代码,仅仅是因为它不会报错.  
 
 ### 传参  
 当你初学编程,神坛上的谭浩强已经告诉你要给变量和方法起个合适的名字.但是他似乎没告诉你要传一个合适的参数进去.  
@@ -94,7 +96,7 @@ B.第一步得到a,再得到b,结果是a + b 叫做 actual,然后4应该等于ac
 assertThat("test", anyOf(is("test2"), containsString("te")));
 {% endhighlight %}
 
-###  用一个等宽,漂亮的字体  
+### 用一个等宽,漂亮的字体  
 你无法控制别人用什么字体看你的代码,但是你能控制你用什么字体看自己的代码. 试试等宽字体  
 
 >A monospaced font, also called a fixed-pitch, fixed-width or non-proportional
