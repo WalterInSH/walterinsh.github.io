@@ -5,6 +5,7 @@ title: MyBatis 团队是如何写单元测试的
 
 #引言
 MyBatis是一个Java持久层框架,但是和Hibernate不一样,因为
+
 >MyBatis does not map Java objects to database tables but Java methods to SQL statements.
 
 写出这个流行框架的团队,是如何做单元测试的呢?

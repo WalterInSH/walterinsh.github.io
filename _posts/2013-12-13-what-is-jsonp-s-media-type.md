@@ -12,7 +12,8 @@ jQuery110200643796210642904_1386842752478({"field":value})
 这种结构。括号中间的是我们接口返回的数据，JSON结构。
 
 那么jsonp的media type到底是json还是javascript呢？长的好像json
->官方文档中：
+
+>官方文档中:  
 >The most critical piece of this proposal is that browser vendors must begin to enforce this rule for script tags that are receiving JSON-P content, and throw errors (or at least stop processing) on any non-conforming JSON-P content.
 In order for the browser to be able to know when it should apply such content-filtering to what might otherwise be seen as regular JavaScript content, the MIME-type "application/json-p" and/or "text/json-p" must be declared on the requesting &lt;script&gt; element. Furthermore, the browser can enforce that the response must be of the matching MIME-type, or fail with errors as well.
 
