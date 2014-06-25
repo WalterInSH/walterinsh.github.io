@@ -123,5 +123,5 @@ git pull
 {% endhighlight %}
 
 ##备注  
-该方案强烈依赖于git submodule功能,所以强烈建议先仔细学习该功能.
+该方案强烈依赖于git submodule功能,所以强烈建议先仔细学习该功能. 
 关于git无法跟踪submodule分支的问题参看[这里](http://stackoverflow.com/questions/1777854/git-submodules-specify-a-branch-tag)
