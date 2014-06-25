@@ -20,7 +20,7 @@ D.开发\CI环境安装nodejs
 
 ##原理  
 A.git submodule可以方便在一个git项目中引入另一个git项目,两者相对独立,各自的版本控制互不影响.这样就可以保证这个方案对前端工程师是透明的,对后端工程师而言就像一个普通的目录.  
-B.git submodule保留前后端项目不同git分支的对应关系
+B.git submodule保留前后端项目不同git分支的对应关系(git version > 1.8.2)
 
 ##搭建步骤  
 A. 后端项目使用git submodule引入前端项目
@@ -124,3 +124,4 @@ git pull
 
 ##备注  
 该方案强烈依赖于git submodule功能,所以强烈建议先仔细学习该功能.
+关于git无法跟踪submodule分支的问题参看[这里](http://stackoverflow.com/questions/1777854/git-submodules-specify-a-branch-tag)
