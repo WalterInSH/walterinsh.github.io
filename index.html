@@ -3,7 +3,7 @@ layout: homepage
 title: WalterInSH home page
 ---
 <div id="posts" class="container">
-    <h3>New Posts</h3>
+    <h3>最新心得</h3>
     {% for post in site.posts limit:5%}
     <div class="row big_bar">
         <span class="col-md-2">{{ post.date | date_to_string }}</span>
@@ -13,21 +13,21 @@ title: WalterInSH home page
 </div>
 
 <div id="blog_tags" class="container">
-    <h3>Posts' tags</h3>
+    <h3>标签</h3>
 </div>
 
 <div class="container items">
-    <h3>For Any Further Info</h3>
+    <h3>更多</h3>
     <div class="item">
-        <p>Viewing my codes is a shortcut to know me. I host projects on GitHub what is an awesome website.</p>
-        <a href="https://github.com/WalterInSH" class="btn btn-primary">Visit GitHub</a>
+        <p>光说不练假把式. 看看我的代码?</p>
+        <a href="https://github.com/WalterInSH" class="btn btn-primary">访问我的 GitHub</a>
     </div>
     <div class="item">
-        <p>I've got experiences in programing. I'd like to share these with you.</p>
-        <a href="http://faolou.me/blogs.html" class="btn btn-primary">Read my blogs</a>
+        <p>看看我的心得,也许你会发现些有用的东西.</p>
+        <a href="http://faolou.me/blogs.html" class="btn btn-primary">马上开始</a>
     </div>
     <div class="item">
-        <p>Any excellent ideas of building a blog or an issue could be reported here.</p>
-        <a href="https://github.com/WalterInSH/walterinsh.github.io/issues" class="btn btn-primary">Report!</a>
+        <p>关于如果写好心得,可以在这里告诉我.</p>
+        <a href="https://github.com/WalterInSH/walterinsh.github.io/issues" class="btn btn-primary">这就去</a>
     </div>
 </div>
