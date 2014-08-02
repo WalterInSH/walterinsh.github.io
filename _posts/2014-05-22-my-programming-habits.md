@@ -96,19 +96,39 @@ B.第一步得到a,再得到b,结果是a + b 叫做 actual,然后4应该等于ac
 assertThat("test", anyOf(is("test2"), containsString("te")));
 {% endhighlight %}
 
-### 用一个等宽,漂亮的字体  
-你无法控制别人用什么字体看你的代码,但是你能控制你用什么字体看自己的代码. 试试等宽字体  
+### 可读性和行数的平衡  
+首先一个方法的行数最好能在一屏内,但是这并不意味着要最大限度的减少行数,有时增加几行会让代码更好读
 
->A monospaced font, also called a fixed-pitch, fixed-width or non-proportional
-font, is a font whose letters and characters each occupy the same amount of
-horizontal space.This contrasts with variable-width fonts, where the letters
-differ in size from one another, as do spacings in between many letters.
+{% highlight java linenos%}
+ConnectionPool connPool = ConnectionPool.newInstance(30,400,true,false);
+{% endhighlight %}
 
-下面是两种等宽字体,你也可以下载更多的你喜欢的字体.  
-[Source code pro](https://github.com/adobe/source-code-pro)  
-[inconsolata](http://levien.com/type/myfonts/inconsolata.html)
+假设我们要获得一个连接池的实例,这么写已经足够了,而且行数还特别少.但是当你回头读这行代码的时候,特别是当你出现bug回头复查的时候,
+这行可能因为可读性差而隐藏了bug.例如在上面的代码中,code reviewer 无法第一眼看出你是否使用了默认驱动,它们要更仔细的去阅读.
 
-如果你懒得下载安装一个喜欢的字体,至少从IDE提供的字体中选一个舒服的
+如果你不看newInstance的的JavaDoc,你肯定无法得知那四个参数都是什么意思.但是当你使用成员变量或者本地变量声明它们,
+别人就更好理解你是怎么初始化它的,是不是真的正确的初始化它们的.也许你已经这么干了只是你没感觉到.
+
+{% highlight java linenos%}
+//local variable or class field
+int minConn = 30;
+int maxConn = 400;
+boolean useDefaultDriver = true;
+boolean longConn = false;
+
+ConnectionPool connPool = ConnectionPool.newInstance(minConn,maxConn,useDefaultDriver,longConn);
+{% endhighlight %}
+
+在编写可读代码的艺术一书中,作者提到了一种写法(如下),我感觉适合参数较少的时候,或者你想对其中某一个特别标注的时候,当参数多的时候也不如声明几个变量.
+
+{% highlight java linenos%}
+ConnectionPool connPool = ConnectionPool.newInstance(/*minConn=*/30,
+                                                /*maxConn=*/400,
+                                                /*useDefaultDriver=*/true,
+                                                /*longConn=*/false);
+{% endhighlight %}
+
+Less code more feature并不是说行数少,代码多几行并不意味着读上去更耗时间,将关键信息简写可能会隐藏bug.
 
 ---
 
