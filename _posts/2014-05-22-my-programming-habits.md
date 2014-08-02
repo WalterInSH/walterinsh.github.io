@@ -18,7 +18,7 @@ title: 我的编程习惯
 其实,很多时候都没必要.而这些没必要的代码,就浪费了你读代码的时间,增加了复杂程度,同时我坚信"没用的代码也是bug".  
 除了"一个标准的API,如果返回值是集合时,不应该是null",还有很多常见的API实际上也是不需要判空的
 
-{% highlight java linenos%}
+{% highlight java %}
 HttpSession session = request.getSession();
 
 if(session == null){
@@ -40,7 +40,7 @@ does not have a session, creates one.
 假设一个方法,目的是检查session中的用户信息,怎么起名字呢? 参数怎么办呢?  
 checkOnlineUser似乎是个不错的名字,就这么定了.下面这个怎么样?
 
-{% highlight java linenos%}
+{% highlight java %}
 private void checkOnlineUser(HttpServletRequest request) {
   // Step one: Get user detail from request session
   // Step two: Check
@@ -51,7 +51,7 @@ private void checkOnlineUser(HttpServletRequest request) {
 虽然上面这个写法可以实现业务,但是总会给人一个参数和方法名无关的感觉.试着读下面的方法签名,是不是更顺口
 一点
 
-{% highlight java linenos%}
+{% highlight java %}
 User onlineUser = getUserFromRequest(request);
 
 checkOnlineUser(onlineUser);
@@ -65,7 +65,7 @@ private void checkOnlineUser(User onlineUser) {
 ### equals断言的可读性  
 断言中的equals断言,是有顺序的,testng中actual在前expected在后,junit相反.
 
-{% highlight java linenos%}
+{% highlight java %}
 // testng
 static public void assertEquals(String actual, String expected);
 
@@ -75,7 +75,7 @@ static public void assertEquals(double expected, double actual);
 
 有病的处女座,这两个有什么区别?体会以下如下过程
 
-{% highlight groovy linenos%}
+{% highlight groovy %}
 def a = stepOne();
 def b = stepTwo(a);
 def actual = a + b;
@@ -92,14 +92,14 @@ B.第一步得到a,再得到b,结果是a + b 叫做 actual,然后4应该等于ac
 
 甚至还有一个框架为了测试可读性做了更多事情
 
-{% highlight java linenos%}
+{% highlight java %}
 assertThat("test", anyOf(is("test2"), containsString("te")));
 {% endhighlight %}
 
 ### 可读性和行数的平衡  
 首先一个方法的行数最好能在一屏内,但是这并不意味着要最大限度的减少行数,有时增加几行会让代码更好读
 
-{% highlight java linenos%}
+{% highlight java %}
 ConnectionPool connPool = ConnectionPool.newInstance(30,400,true,false);
 {% endhighlight %}
 
@@ -109,7 +109,7 @@ ConnectionPool connPool = ConnectionPool.newInstance(30,400,true,false);
 如果你不看newInstance的的JavaDoc,你肯定无法得知那四个参数都是什么意思.但是当你使用成员变量或者本地变量声明它们,
 别人就更好理解你是怎么初始化它的,是不是真的正确的初始化它们的.也许你已经这么干了只是你没感觉到.
 
-{% highlight java linenos%}
+{% highlight java %}
 //local variable or class field
 int minConn = 30;
 int maxConn = 400;
@@ -121,7 +121,7 @@ ConnectionPool connPool = ConnectionPool.newInstance(minConn,maxConn,useDefaultD
 
 在编写可读代码的艺术一书中,作者提到了一种写法(如下),我感觉适合参数较少的时候,或者你想对其中某一个特别标注的时候,当参数多的时候也不如声明几个变量.
 
-{% highlight java linenos%}
+{% highlight java %}
 ConnectionPool connPool = ConnectionPool.newInstance(/*minConn=*/30,
                                                 /*maxConn=*/400,
                                                 /*useDefaultDriver=*/true,
