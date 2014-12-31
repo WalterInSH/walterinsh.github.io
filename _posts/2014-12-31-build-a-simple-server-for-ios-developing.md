@@ -15,7 +15,7 @@ title: 为iOS开发搭建一个简单Server
 有时候你需要一些数据,不能跳过去,那可以像下面这样写死
 
 {% highlight Objective-C %}
-NSString *respData = @"[{"dataId":1,"dataContent":"Happy New Year"}]";
+NSString *respData = @"[{\"dataId\":1,\"dataContent\":\"Happy New Year\"}]";
 NSArray *dataArray = [respData objectFromJSONString];
 {% endhighlight %}
 
@@ -48,3 +48,5 @@ NSArray *dataArray = [respData objectFromJSONString];
 
 方案C提供了一个简单真实的后端Server,同时不需要真的花太多时间去搭后端环境,编的假数据也可以被组织起来.
 当你真的准备开发后端的时候,按照数据格式,一心搭一个后端服务.而在这之前,一心写App.
+
+方案C相较方案B,还有一个小有点,可以让代码规整一点,那些写死的假数据NSString,往往很长,让代码变得不整洁.
