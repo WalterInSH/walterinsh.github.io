@@ -1,6 +1,7 @@
 ---
-layout: blog
+layout: post
 title: 我的编程习惯
+date:   2014-05-22
 ---
 
 2011年以前,我眼中的整洁代码仅仅是该缩进的地方缩进.自从读了[编写可读代码的艺术](http://www.amazon.cn/dp/B008B4DTG4)

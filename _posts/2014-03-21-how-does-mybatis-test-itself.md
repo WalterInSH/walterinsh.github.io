@@ -1,6 +1,7 @@
 ---
-layout: blog
+layout: post
 title: MyBatis 团队是如何写单元测试的
+date:   2014-03-21
 ---
 
 #引言

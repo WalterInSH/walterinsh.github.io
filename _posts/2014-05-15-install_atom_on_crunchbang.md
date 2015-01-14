@@ -1,6 +1,7 @@
 ---
-layout: blog
+layout: post
 title: 在debian上安装atom编辑器
+date:   2014-05-15
 ---
 
 Atom是一款很好用的编辑器,目前只提供mac版的包. 但是你可以用源码自行编译安装.详情请看  

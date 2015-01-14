@@ -1,33 +1,13 @@
 ---
-layout: homepage
-title: WalterInSH home page
+layout: default
+title: Architect Theme by Jason Long
 ---
-<div id="posts" class="container">
-    <h3>最新心得</h3>
-    {% for post in site.posts limit:5%}
-    <div class="row big_bar">
-        <span class="col-md-2">{{ post.date | date_to_string }}</span>
-        <span class="col-md-10"><a href="{{ post.url }}">{{ post.title }}</a></span></div>
+
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
-    </ul>
-</div>
-
-<div id="blog_tags" class="container">
-    <h3>标签</h3>
-</div>
-
-<div class="container items">
-    <h3>更多</h3>
-    <div class="item">
-        <p>光说不练假把式. 看看我的代码?</p>
-        <a href="https://github.com/WalterInSH" class="btn btn-primary">访问我的 GitHub</a>
-    </div>
-    <div class="item">
-        <p>看看我的心得,也许你会发现些有用的东西.</p>
-        <a href="http://faolou.me/blogs.html" class="btn btn-primary">马上开始</a>
-    </div>
-    <div class="item">
-        <p>关于如何写好心得,可以在这里告诉我.</p>
-        <a href="https://github.com/WalterInSH/walterinsh.github.io/issues" class="btn btn-primary">这就去</a>
-    </div>
+  </ul>
 </div>

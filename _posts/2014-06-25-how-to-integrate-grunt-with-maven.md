@@ -1,6 +1,7 @@
 ---
-layout: blog
+layout: post
 title: 如何在前后端开发分离时做grunt & maven集成
+date:   2014-06-25
 ---
 
 ##背景  

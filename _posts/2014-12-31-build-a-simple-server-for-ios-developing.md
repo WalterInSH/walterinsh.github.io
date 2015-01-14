@@ -1,6 +1,7 @@
 ---
-layout: blog
+layout: post
 title: 为iOS开发搭建一个简单Server
+date:   2014-12-31
 ---
 
 往往,我们开发的App不是一个完全独立的程序,需要访问后端服务器交换数据.例如登录注册这种简单的请求.

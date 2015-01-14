@@ -1,6 +1,7 @@
 ---
-layout: blog
+layout: post
 title: 用pathogen管理vim 插件
+date:   2014-03-13
 ---
 
 Vim 插件可以加快我们在Vim中编辑的效率,实现快速定位到某个文件,更友好的Tab界面,代码提错等功能.

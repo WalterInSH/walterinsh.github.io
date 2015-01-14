@@ -1,6 +1,7 @@
 ---
-layout: blog
+layout: post
 title: Maven 编译后 二进制文件乱码
+date:   2013-05-12
 ---
 
 背景：一个Maven项目，在resource下有一个数据文件(.dat)，程序中需要读取这个文件。在编译后，读取失败，md5验证后发现文件变了，出现了乱码。
