@@ -1,6 +1,7 @@
 ---
-layout: blog
+layout: post
 title: Json-p 的meida type到底是什么
+date:   2013-12-13
 ---
 
 JSON-P是跨域访问常用的框架，jQuery支持，我们的项目中大量使用这种方式开发。

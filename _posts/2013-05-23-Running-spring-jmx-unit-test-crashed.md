@@ -1,6 +1,7 @@
 ---
-layout: blog
+layout: post
 title: Spring 进行JMX单元测试报错
+date:   2013-05-23
 ---
 
 背景：多个Junit单元测试，使用Spring test一次全跑，报错，报错内容是JMX环境被多次加载（javax.management.InstanceAlreadyExistsException）。

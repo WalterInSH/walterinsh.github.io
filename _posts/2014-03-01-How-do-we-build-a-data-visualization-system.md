@@ -1,6 +1,7 @@
 ---
-layout: blog
+layout: post
 title: 我们是如何构建一个内部使用的数据可视化web应用 
+date:   2014-03-01
 ---
 
 ### 背景介绍

@@ -1,12 +1,13 @@
 ---
-layout: blog
+layout: post
 title: linux top 命令指标简介
+date:   2014-04-14
 ---
 
 Top是linux中常用来了解系统运行状况的命令,一眼看过去有CPU和内存等信息,但是,仍有很多不知道是什么.这篇blog旨在解释top信息中的不同指标是什么意思.先上图.
 
 
-<img src="/image/posts/linux-top-command.png"/>
+<img src="/images/posts/linux-top-command.png"/>
 
 最开始显示了当前时间,机器启动了多久,当前有几个用户(session).较为简单,不多做解释.
 
@@ -25,7 +26,7 @@ Unix定义CPU负载: 当前正在执行进程数 + 正在等候执行的进程�
 linux内核正在管理的任务数,先上图
 
 <a href="#nogo">
-    <img src="/image/posts/procflow.gif"/>
+    <img src="/images/posts/procflow.gif"/>
 </a>
 
 这张示意图展示了linux是如何管理Task的生命周期的, tasks后面显示的就是不同状态的task有多少.[延伸阅读](http://www.linuxuser.co.uk/features/life-cycle-of-a-process)
@@ -96,7 +97,7 @@ priority = nice_value + 20
 ### glances
 [Glances](https://github.com/nicolargo/glances) 在top的基础上集成了更多系统信息,提供了更多友好的提示. 例如对于Critical的指标会以红色高亮. 对于出过问题的进程会有记录.
 
-<img src="/image/posts/glances.png"/>
+<img src="/images/posts/glances.png"/>
 
 
 

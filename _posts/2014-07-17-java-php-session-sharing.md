@@ -1,6 +1,7 @@
 ---
-layout: blog
+layout: post
 title: Java & PHP session 共享
+date:   2014-07-17
 ---
 
 ###Backgroud  

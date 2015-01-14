@@ -1,6 +1,7 @@
 ---
-layout: blog
+layout: post
 title: 如何禁用Mac OS原生快捷键
+date:   2014-06-21
 ---
 
 一直感觉在Mac上开发时快捷键是个很烦的问题,经常系统快捷键和IDE的快捷键冲突,在system preferences
@@ -8,7 +9,7 @@ title: 如何禁用Mac OS原生快捷键
 
 step 1:  
 双击 ~/Library/Preferences/com.apple.symbolichotkeys.plist 文件(我安装了xcode),如下图  
-<img src="/image/posts/mac_hotkey_setting.png" width="450px"/>
+<img src="/images/posts/mac_hotkey_setting.png" width="450px"/>
 
 step 2:  
 从[这里](http://hintsforums.macworld.com/archive/index.php/t-114785.html)找到你要操作的快捷键,并在打开的文件中找到.

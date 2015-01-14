@@ -1,6 +1,7 @@
 ---
-layout: blog
+layout: post
 title: 如何使用Idea live template
+date:   2014-10-28
 ---
 
 
