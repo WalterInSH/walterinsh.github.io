@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 为iOS开发搭建一个简单Server
-date:   2014-12-31
+title: 使用Docker部署MySQL
+date:   2015-01-17
 ---
 
 本文简述如何使用Docker部署mysql,同时持久化数据.我们会用到[tutum-docker-mysql](https://github.com/tutumcloud/tutum-docker-mysql)
@@ -38,7 +38,7 @@ mysql -uadmin -pi6k5USp9Km9G -h127.0.0.1
 docker stop mysql
 {% endhighlight %}
 
-我们制定一个本地可以挂载的路径,重新启动tutum-docker-mysql.我们指定/home/walter/softwares/tutum-docker-mysql/data 挂到Container里的/var/lib/mysql目录(-v Bind mount a volume).
+我们指定一个本地可以挂载的路径,重新启动tutum-docker-mysql.我们指定/home/walter/softwares/tutum-docker-mysql/data 挂到Container里的/var/lib/mysql目录(-v Bind mount a volume).
 这样子我们就可以将数据持久化在主机(Host)的目录中了.
 
 {% highlight Bash shell scripts %}
