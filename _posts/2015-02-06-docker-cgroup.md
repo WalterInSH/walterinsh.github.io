@@ -80,7 +80,7 @@ ns - 命名空间
 
 ##Subsystems, Hierarchies, Control Groups, Tasks之间的关系
 
-规则1  
+规则1(图取自官网)  
 cgroups是层级结构的，每个hierarchy都可以有多个subsystem，但是不能有重复的subsystem.
 
 <img src="/images/posts/cgroup1.png"/>
@@ -100,5 +100,5 @@ cgroups是层级结构的，每个hierarchy都可以有多个subsystem，但是�
 
 <img src="/images/posts/cgroup4.png"/>
 
-
+参考  
 https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Resource_Management_Guide/ch01.html
