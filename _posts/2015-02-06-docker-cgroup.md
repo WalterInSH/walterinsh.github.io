@@ -1,21 +1,23 @@
 ---
 layout: post
-title: Docker cgroup
+title: Docker 和 cgroup
 date:   2015-02-06
 ---
 
-Docker使用了linux中的cgroup来实现container的资源管理。本文简述docker中cgroup的使用和cgroup的原理。
+Docker使用了linux中的cgroup来实现container的资源管理, 限制一个container使用多少资源(eg. cpu).
+本文简述docker中cgroup的使用并简要介绍cgroup.
 
-##查看container可以使用的资源配置
+##如何限制Docker container的资源
 
-既然cgroup限制了container使用的资源，那我们先启动一个container，看看它的限制，以内存为例(可以通过-c参数限制cpu)
+答案很简单,Docker 的run命令提供了启动时设置资源限制，以内存为例(可以通过-c参数限制cpu),我们限制这个container只能使用10M内存.
 
 {% highlight Bash shell scripts %}
 # docker  run -d -m=10m -t centos sleep 3600
 55fc03ef1389b0da0064fd54fa76aaee8f5656389f69d63886732dc93bc7013d
 {% endhighlight %}
 
-然后我们看一下它内存使用的信息，信息存放在"/sys/fs/cgroup/memory/system.slice", 具体的Container信息存放在"docker-<ContainerID>.scope"中(这里针对CentOS，和官方文档不一致).
+然后我们看一下它内存使用的信息，信息存放在"/sys/fs/cgroup/memory/system.slice",
+具体的Container信息存放在"docker-<ContainerID>.scope"中(这里针对CentOS，和官方文档不一致).
 
 {% highlight Bash shell scripts %}
 # cat docker-55fc03ef1389b0da0064fd54fa76aaee8f5656389f69d63886732dc93bc7013d.scope/memory.stat
@@ -33,7 +35,7 @@ active_anon 90112
 inactive_file 2715648
 active_file 102400
 unevictable 0
-hierarchical_memory_limit 10485760<- 10M 
+hierarchical_memory_limit 10485760<- 10M
 hierarchical_memsw_limit 20971520
 total_cache 2818048
 total_rss 90112
@@ -51,15 +53,18 @@ total_active_file 102400
 total_unevictable 0
 {% endhighlight %}
 
-我们从这个文件中可以看到关于这个container内存的信息。例如我们启动时设置的最大内存10485760byte(10M)。
+我们从这个文件中可以看到关于这个container内存的信息.例如我们启动时设置的最大内存10485760byte(10M).
 
 ##什么是cgroups
 
-Red Hat Enterprise Linux 6 提供了一个control groups功能，简称cgroups. 允许你给一组进程分配一定的资源，例如CPU、内存。你可以监控这一组进程，阻止其访问敏感资源，甚至可以在运行时修改其配置。
+Red Hat Enterprise Linux 6 提供了一个control groups功能，简称cgroups. 允许你给一组进程分配一定的资源，
+例如CPU、内存.你可以监控这一组进程，阻止其访问敏感资源，甚至可以在运行时修改其配置.
 
 cgroups通过分层(hierarchically)管理，其有child cgroups. child cgroups可以从parent cgroup继承一些属性.
 
-cgroups的设计很像linux进程的设计，结构就像一棵树一样，主要不同的地方在于Linux进程是一棵树(Linux进程都是init进程的子进程), 但是多个不相关的cgroups层级结构(hierarchies of cgroups)可以同时存在，就像同时有多棵没有关系的树.后文中将称每一个这样的cgroups结构为hierarchy.
+cgroups的设计很像linux进程的设计，结构就像一棵树一样，主要不同的地方在于Linux进程是一棵树(Linux进程都是init进程的子进程),
+但是多个不相关的cgroups层级结构(hierarchies of cgroups)可以同时存在，就像同时有多棵没有关系的树.
+后文中将称每一个这样的cgroups结构为hierarchy.
 
 ##subsystems
 
@@ -91,7 +96,8 @@ cgroups是层级结构的，每个hierarchy都可以有多个subsystem，但是�
 <img src="/images/posts/cgroup2.png"/>
 
 规则3  
-当一个新hierarchy被建立，默认所有task都属于这个hierarchy，它被成为root hierarchy. 每一个task可以属于某一个hierarchy中的某一个cgroup, 每一个task可以属于不同hierarchy的多个cgroup.如果一个task被赋予一个hierarchy中的另一个cgroup,之前的cgroup将失去这个task.
+当一个新hierarchy被建立，默认所有task都属于这个hierarchy，它被成为root hierarchy. 每一个task可以属于某一个hierarchy中的某一个cgroup,
+每一个task可以属于不同hierarchy的多个cgroup.如果一个task被赋予一个hierarchy中的另一个cgroup,之前的cgroup将失去这个task.
 
 <img src="/images/posts/cgroup3.png"/>
 
@@ -100,5 +106,10 @@ cgroups是层级结构的，每个hierarchy都可以有多个subsystem，但是�
 
 <img src="/images/posts/cgroup4.png"/>
 
-参考  
-https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Resource_Management_Guide/ch01.html
+##如何管理机器的cgroups
+
+可以使用libcgroup和libcgroup-tools,也可以使用systemd或者mount命令管理机器的cgroups,但是更改机器的cgroup配置有可能造成问题,可以在Docker
+container中做实验
+
+##参考  
+[https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Resource_Management_Guide/ch01.html](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Resource_Management_Guide/ch01.html)
