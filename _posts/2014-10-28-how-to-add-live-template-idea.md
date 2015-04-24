@@ -38,6 +38,14 @@ Step6
 点击OK，回到一个Java Class中,在class body中输入lg,然后按Tab键, 你就自动得到了一个Logger
 
 
+通过类似的方法，你还可以创建更多模版，让自己的开发变得更快, 例如Spring MVC的controller就可以配一个(JsonResult是自己定义的)
 
+{% highlight java%}
+@org.springframework.web.bind.annotation.RequestMapping(value = "$PATH$", method = RequestMethod.$HTTP_METHOD$)
+@org.springframework.web.bind.annotation.ResponseBody
+public JsonResult $METHOD$($PARAMETERS$){
+    $END$
+    return JsonResult.create();
+}
+{% endhighlight %}
 
-通过类似的方法，你还可以创建更多模版，让自己的开发变得更快
