@@ -27,16 +27,16 @@ git clone git@github.com:mgalgs/fuzzy_bash_completion.git
 cd fuzzy_bash_completion
 
 #set up
-echo "source $(pwd)/fuzzy_bash_completion" | >> ~/.bashrc
-echo "fuzzy_replace_filedir_xspec" | >> ~/.bashrc
+echo "source $(pwd)/fuzzy_bash_completion" >> ~/.bashrc
+echo "fuzzy_replace_filedir_xspec" >> ~/.bashrc
 
 #enable fuzzy bash completion for cd, ls, and rm command.
-echo "fuzzy_setup_for_command cd" | >> ~/.bashrc
-echo "fuzzy_setup_for_command ls" | >> ~/.bashrc
-echo "fuzzy_setup_for_command rm" | >> ~/.bashrc
+echo "fuzzy_setup_for_command cd" >> ~/.bashrc
+echo "fuzzy_setup_for_command ls" >> ~/.bashrc
+echo "fuzzy_setup_for_command rm" >> ~/.bashrc
 
 #put the following in your ~/.inputrc
-echo "set show-all-if-ambiguous on" | >> ~/.inputrc
+echo "set show-all-if-ambiguous on" >> ~/.inputrc
 
 #finally, start it up
 source ~/.bashrc
@@ -57,7 +57,7 @@ git clone git@github.com:juven/maven-bash-completion.git
 cd maven-bash-completion
 
 #set up
-echo "source $(pwd)/bash_completion.bash" | >> ~/.bashrc
+echo "source $(pwd)/bash_completion.bash" >> ~/.bashrc
 
 #start it up
 source ~/.bashrc
