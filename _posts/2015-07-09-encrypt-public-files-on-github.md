@@ -18,10 +18,12 @@ git-encrypt是一个加密工具，它可以加密你git repository中敏感的�
 
 ###如何安装
 
-项目readme有很详细的介绍，对于mac用户一行命令搞定
+项目readme有很详细的介绍，对于有package manager的用户一行命令搞定
 
 {% highlight Bash shell scripts %}
 brew install git-encrypt
+OR
+npm install -g git-encrypt
 {% endhighlight %}
 
 ###如何使用
