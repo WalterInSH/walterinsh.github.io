@@ -44,6 +44,13 @@ _接下来是加密算法和你想加密什么文件_
 
 当你再次修改了需要被加密的文件，并push到remote之后，文件内容就已经是被加密的了。即便这个项目是public的，也无人知晓这个是什么。
 
+###Decrypting clones
+
+官方README中已经有十分详细的解密过程，只是需要注意两点。
+
+* clone的时候别忘了参数 -n
+* 使用gitcrypt init来解密更方便，能不手动就不手动
+
 ###使用github private repository呢？
 
 无论github 还是bitbucket，虽然都有private项目，权限管理也很不错。但是代码毕竟是交出去了，
