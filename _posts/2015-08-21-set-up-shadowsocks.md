@@ -16,7 +16,7 @@ date:   2015-08-21
 
 记住IP，下文用ADDRESS-IP表示
 
-###Step 2 安装Docker
+###Step 2 VPS安装Docker
 
 {% highlight Bash shell %}
 yum install -y docker
@@ -24,7 +24,7 @@ yum install -y docker
 systemctl start docker
 {% endhighlight %}
 
-###Step 3安装 shadowsocks-libev
+###Step 3 VPS安装 shadowsocks-libev
 
 {% highlight Bash shell %}
 docker run -p 8388:8388 -e "PASSWORD=YOUR-PASSWORD" vimagick/shadowsocks-libev
@@ -32,7 +32,7 @@ docker run -p 8388:8388 -e "PASSWORD=YOUR-PASSWORD" vimagick/shadowsocks-libev
 
 用一个自己的密码将命令中的YOUR-PASSWORD替换掉，之后我们会用到这个密码
 
-###Step 4安装Client
+###Step 4 本地安装Client
 
 ####Linux
 
@@ -76,3 +76,29 @@ Switch Rules tab中 Online Rule List 中粘贴地址 https://autoproxy-gfwlist.g
 同时在Proxy Profile下拉框中选择Shadowsocks.
 
 这样基本就可以上你想上的网站了，更多Proxy SwitchySharp的使用技巧请进一步Google。
+
+###Step 6(optional) 安装proxychains
+
+proxychains可以方便你在命令行使用shadowsocks。
+
+{% highlight Bash shell %}
+sudo apt-get install proxychains
+{% endhighlight %}
+
+在 ~/.proxychains/proxychains.conf创建proxychains的配置文件，将下面文本复制进去
+
+{% highlight Text %}
+strict_chain
+proxy_dns
+remote_dns_subnet 224
+tcp_read_time_out 15000
+tcp_connect_time_out 8000
+localnet 127.0.0.0/255.0.0.0
+socks5 	127.0.0.1 8388
+{% endhighlight %}
+
+然后在命令行执行命令时，增加proxychains便可以使该命令使用shadowsocks，例如
+
+{% highlight Bash shell %}
+proxychains wget https://www.google.com
+{% endhighlight %}
