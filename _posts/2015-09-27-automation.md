@@ -51,3 +51,23 @@ Look! This is true automation! It's not as convenience as tap water but it's a m
 We need high-techs to be more efficient but it's not necessary to build a automatic system.
 
 ##Automation changes our life in many ways
+
+As the wikipedia says, many things are using automation everyday.
+
+I've got to say, people are lazy. Since that, we've created lots of things to get rid of works. Google's self-driving car might be one of the most forward-looking projects to help lazy guys.
+
+<img src="http://top5coolnesscountdown.com/wp-content/uploads/2014/05/google-self-driving-car-3-1024x576.jpg"/>
+
+You probably don't concern things like a self-driving car. But you definitely have used a timer or a alarm.
+
+<img src="/images/posts/timer.png"/>
+
+You can easily set a timer on google or your iPhone by typing or clicking several keys.
+
+Timers could help you with concentrating on one task when you have another task to do after a period of time. You need not check out the time repeatedly. The timer will handle that for you automatically. That helps me a lot.
+
+You're using automation everyday, you just haven't realized that.
+
+##Get started using automation
+
+Just take a look around you, you'll find a plenty of things related to automation: e-mail filters, alarms, electric cookers etc. You don't actually need to invent one, just buy one or start using them.
