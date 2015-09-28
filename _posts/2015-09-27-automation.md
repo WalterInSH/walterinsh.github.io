@@ -6,7 +6,7 @@ date:   2015-09-27
 
 ##What is automation?
 
-First of all, let's look up wikipedia. Find out what is "automation"
+First of all, let's look up the wikipedia. Find out what is "automation"
 
 >Automation or automatic control, is the use of various control systems for operating equipment such as machinery, processes in factories, boilers and heat treating ovens, switching on telephone networks, steering and stabilization of ships, aircraft and other applications with minimal or reduced human intervention. Some processes have been completely automated.
 
@@ -14,7 +14,7 @@ It looks like automation is a very high end tech stuff, doesn't it?
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Bundesarchiv_B_145_Bild-F038788-0020%2C_Wolfsburg%2C_VW_Autowerk%2C_K%C3%A4fer.jpg"/>
 
-Volkswagen spent tons of money on building this assembly line, they must have hired lots of brilliant scientists.
+Volkswagen spent tons of money on building its assembly line, they must have hired lots of brilliant scientists.
 
 But have you ever thought about these questions:
 
@@ -30,7 +30,7 @@ Scientists are insanely brilliant. They may invent some incredible things. But t
 
 I'm going to take the ancient public water supply system for example.
 
-A long time ago, we had to walk miles to find drinking water: a river or a lake. Thank god! They found one, and a community was built along the water resource. And the community started growing.
+A long time ago, we had to walk miles to find drinking water: a river or a lake. Thank god! We found one, and a community was built along the water resource. And the community started growing.
 
 Everyday morning, our dear ancestors walked to the river, drink water. This might have took them hours. It would be longer if they wanted to carry bottles of water for their elders who could not walk. (Actually, this's stilling happening right now somewhere on the earth.) Sometimes they carry water for irrigation as well.
 
@@ -70,4 +70,16 @@ You're using automation everyday, you just haven't realized that.
 
 ##Get started using automation
 
-Just take a look around you, you'll find a plenty of things related to automation: e-mail filters, alarms, electric cookers etc. You don't actually need to invent one, just buy one or start using them.
+Just take a look around you, you'll find a plenty of things related to automation: e-mail filters, alarms, electric cookers etc. You don't actually need to invent one, just buy one or get started using them.
+
+I think we should get used to seek tools, best practices and new lifestyles. The principle is quite simple: **if you realize you're doing one thing repeatedly, then get started finding out an approach to do it automatically.**
+
+We use e-mail filters to organize or classify mails instead of repeatedly moving them.
+
+We permit web browsers to save your passwords instead of repeatedly remembering new passwords.
+
+We pre-set our bank card number shortcut on iPhone. When I need to repeatedly fill out forms, I just type something like "bcn", it completes the rest automatically.
+
+We invented these tools cuz we found out we're repeatedly doing things. Fortunately we can do it without inventing them. They're already there and out-of-the-box.
+
+##
