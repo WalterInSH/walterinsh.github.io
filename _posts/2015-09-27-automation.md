@@ -74,7 +74,7 @@ Basically it changes our life by speeding your work up(Excel), giving a stable o
 
 Just take a look around you, you'll find a plenty of things related to automation: e-mail filters, alarms, electric cookers etc. You don't actually need to invent one, just buy one or get started using them.
 
-I think we should get used to seek tools, best practices and new lifestyles. The principle is quite simple: **if you realize you're doing one thing repeatedly, then get started finding out an approach to do it automatically.**
+I think we should get used to seeking tools, best practices and new lifestyles. The principle is quite simple: **if you realize you're doing one thing repeatedly, then get started finding out an approach to do it automatically.**
 
 We use e-mail filters to organize or classify mails instead of repeatedly moving them.
 
@@ -82,7 +82,7 @@ We permit web browsers to save your passwords instead of repeatedly remembering 
 
 We pre-set our bank card number shortcut on iPhone. When I need to repeatedly fill out forms, I just type something like "bcn", it completes the rest automatically.
 
-We invented these tools cuz someone found out they're repeatedly doing things. Fortunately we can do it without inventing them. They're already there and out-of-the-box. Google and your friends would be your best resources to learn these tools.
+We invented these tools cuz someone found out they're repeatedly doing things. Fortunately we can do the same thing without inventing tools. Those tools are already there and out-of-the-box. Google and your friends would be your best resources to learn these tools.
 
 ##Invent a brand-new automatic system
 
@@ -94,6 +94,8 @@ For software engineers, these tools might help:
 * python
 * [sendwithus](https://app.sendwithus.com/)
 * [Projects on github](https://github.com/)
+
+I've heard of a lot of story about someone got rich by inventing a small but useful tool. Don't miss that chance if you have a idea even it's too plain.
 
 ##Finally
 
