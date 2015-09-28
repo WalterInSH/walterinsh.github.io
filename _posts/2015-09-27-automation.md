@@ -14,7 +14,7 @@ It looks like automation is a very high end tech stuff, doesn't it?
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Bundesarchiv_B_145_Bild-F038788-0020%2C_Wolfsburg%2C_VW_Autowerk%2C_K%C3%A4fer.jpg"/>
 
-Volkswagen spent tons of money on building its assembly line, they must have hired lots of brilliant scientists.
+Volkswagen spent tons of money on building its assembly line, they must have hired lots of brilliant scientists. It's cost a fortune.
 
 But have you ever thought about these questions:
 
