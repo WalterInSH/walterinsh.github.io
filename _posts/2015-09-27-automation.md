@@ -68,6 +68,8 @@ Timers could help you with concentrating on one task when you have another task 
 
 You're using automation everyday, you just haven't realized that.
 
+Basically it changes our life by speeding your work up(Excel), giving a stable outcome(Tap system: 99% works) and saving more strength(email spam filter).
+
 ##Get started using automation
 
 Just take a look around you, you'll find a plenty of things related to automation: e-mail filters, alarms, electric cookers etc. You don't actually need to invent one, just buy one or get started using them.
@@ -80,6 +82,21 @@ We permit web browsers to save your passwords instead of repeatedly remembering 
 
 We pre-set our bank card number shortcut on iPhone. When I need to repeatedly fill out forms, I just type something like "bcn", it completes the rest automatically.
 
-We invented these tools cuz we found out we're repeatedly doing things. Fortunately we can do it without inventing them. They're already there and out-of-the-box.
+We invented these tools cuz someone found out they're repeatedly doing things. Fortunately we can do it without inventing them. They're already there and out-of-the-box. Google and your friends would be your best resources to learn these tools.
 
-##
+##Invent a brand-new automatic system
+
+We cannot always find a perfect tool to implement our plan. If you're happen to be an engineer, why don't you build one?
+
+For software engineers, these tools might help:
+
+* shell
+* python
+* [sendwithus](https://app.sendwithus.com/)
+* [Projects on github](https://github.com/)
+
+##Finally
+
+Automation is an extraordinary system. Building an automatic system is a remarkable work but using automatic systems is also a great evolution.
+
+So stop doing your boring work, start thinking what you're doing is repeated.
