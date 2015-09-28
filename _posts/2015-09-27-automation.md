@@ -95,7 +95,7 @@ For software engineers, these tools might help:
 * [sendwithus](https://app.sendwithus.com/)
 * [Projects on github](https://github.com/)
 
-I've heard of a lot of story about someone got rich by inventing a small but useful tool. Don't miss that chance if you have a idea even it's too plain.
+I've heard of a lot of stories about someone got rich by inventing a small but useful tool. Don't miss that chance if you have a idea even it's too plain.
 
 ##Finally
 
