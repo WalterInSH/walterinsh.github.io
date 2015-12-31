@@ -1,2 +1,32 @@
-markdown: redcarpet
+# Site settings
+## Change the values as needed.
+title: WalterInSH
+email: walterinsh@icloud.com
+description: "WalterInSH's Home"
+keywords: "walterinsh, blog, java, reading"
+#url: "http://walterinsh.github.io"
+baseurl: "" # the subpath of your site, e.g. /blog/
+paginate: 5
+paginate_path: "page:num"
+# Build settings
+markdown: kramdown
 highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: :compressed
+links:
+  facebook: WalterInSH
+  twitter: WalterInSH
+  email: walterinsh@icloud.com
+  github: WalterInSH/
+exclude:
+  - bower_components
+  - README.md
+full_name: Walter Zhang
+
+##set this to enable disqus commenting
+disqus: WalterInSH
+
+##set this to enable google analytics
+#ga_id: analyticsID
+#ga_domain: bitwiser.in
