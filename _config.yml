@@ -23,10 +23,3 @@ exclude:
   - bower_components
   - README.md
 full_name: Walter Zhang
-
-##set this to enable disqus commenting
-disqus: WalterInSH
-
-##set this to enable google analytics
-#ga_id: analyticsID
-#ga_domain: bitwiser.in
