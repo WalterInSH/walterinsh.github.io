@@ -8,21 +8,21 @@ date:   2016-01-14
 
 ###安装
 
-```
+{% highlight Bash shell %}
 sudo gem install whenever
-```
+{% endhighlight %}
 
 ###使用
 
 创建一个config/schedule.rb文件
 
-```
+{% highlight ruby %}
  set :output, "~/Projects/test-whenever/cron_log.log"
 
  every 2.minutes do
    command "echo hello"
  end
-```
+{% endhighlight %}
 
 语法不需要多解释，将job的日志输出到一个指定路径，job的内容是没两分钟输出一句"hello"，运行whenever命令得到如下输出
 
