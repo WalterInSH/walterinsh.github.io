@@ -24,7 +24,7 @@ sudo gem install whenever
  end
 {% endhighlight %}
 
-语法不需要多解释，将job的日志输出到一个指定路径，job的内容是没两分钟输出一句"hello"，运行whenever命令得到如下输出
+语法不需要多解释，将job的日志输出到一个指定路径，job的内容是每两分钟输出一句"hello"，运行whenever命令得到如下输出
 
 {% highlight Bash shell %}
 0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58 * * * * /bin/bash -l -c 'echo hello >> ~/Projects/test-whenever/cron_log.log 2>&1'
