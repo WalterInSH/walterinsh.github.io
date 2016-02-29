@@ -8,7 +8,7 @@ date:   2016-02-23
 
 回想自己的技术增长，很多都是在犯错中成长起来的，而航空产业也是这样，现在的民航客机如此安全，完全是在一次次教训中长大的，只不过这个教训的背后很多时候是一条条生命。在这样的犯错成本下，航空业有自己一套严谨的方法论，涉及设计、研制、测试、交付、维护、事故调查、问题修复方方面面。不如，我们就从这个领域学些东西，用到软件开发中来。
 
-###American Airlines Flight 1420
+### American Airlines Flight 1420
 
 <img src="/images/posts/aci/busy-runway.png"/>
 
@@ -53,7 +53,7 @@ NTSP将目光转向CVR,从录音可以发现，在降落的最后阶段飞行员
 
 [出处](https://www.youtube.com/watch?v=HBYDt__ZBvk)
 
-###Malaysia 370
+### Malaysia 370
 
 <img src="/images/posts/aci/mh370-on-radar.png"/>
 
@@ -74,7 +74,7 @@ NTSP将目光转向CVR,从录音可以发现，在降落的最后阶段飞行员
 
 [出处](https://www.youtube.com/watch?v=kxEIRvkuQq0)
 
-###UPS Airlines Flight 6
+### UPS Airlines Flight 6
 
 2010年9月3日一架从迪拜起飞不久的货运飞机发生了异常，仪表盘显示货仓起火。
 
@@ -123,7 +123,7 @@ NTSP将目光转向CVR,从录音可以发现，在降落的最后阶段飞行员
 
 [出处](http://www.bilibili.com/video/av3700795/)
 
-###Asiana Airlines Flight 214
+### Asiana Airlines Flight 214
 
 <img src="/images/posts/aci/214-hit-seawall.png"/>
 
@@ -160,7 +160,7 @@ NTSP排除了引擎故障和天气的原因，从空管那里得到了一条有�
 
 [出处](http://www.bilibili.com/video/av3613944/)
 
-##总结
+## 总结
 
 看了那么多集ACI, 对于航空业的印象有以下吧：
 
