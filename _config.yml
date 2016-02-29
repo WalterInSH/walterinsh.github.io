@@ -23,3 +23,5 @@ exclude:
   - bower_components
   - README.md
 full_name: Walter Zhang
+gems:
+  - jekyll-paginate
