@@ -27,7 +27,7 @@ layout: base
                 <p>读前推荐</p>
             </div>
             <div class="ui secondary segment">
-                <p>{{ page.rmdtext}} </p><a href="{{page.rmdurl}}" target="_blank">试试这篇博客</a>
+                <p>{{ page.rmdtext}} </p><a href="{{page.rmdurl}}?from=post_head" target="_blank">试试这篇博客</a>
             </div>
         </div>
         {% endif %}
@@ -41,6 +41,34 @@ layout: base
       <div class="post-html">
           {{ content }}
       </div>
+        {% if page.rmdtext%}
+        <div class="ui segments">
+            <div class="ui segment">
+                <p>更多内容</p>
+            </div>
+            <div class="ui secondary segment">
+                <p>{{ page.rmdtext}} </p><a href="{{page.rmdurl}}?from=post_end" target="_blank">试试这篇博客</a>
+            </div>
+        </div>
+        {% endif %}
+        <!--name card-->
+        <a class="ui card" href="/about" style="width:100%">
+            <div class="content">
+                <div class="header">关于作者</div>
+                <div class="meta">
+                    <span class="category">一名软件工程师，热爱运动、英语和美食。希望大家在这里可以享用我的发现！</span>
+                </div>
+                <div class="description">
+                    <p></p>
+                </div>
+            </div>
+            <div class="extra content">
+                <div class="right floated author">
+                    <img class="ui avatar image" src="https://avatars3.githubusercontent.com/u/4099427?v=3&s=40"> 张凯
+                </div>
+            </div>
+        </a>
+
       <footer>
         <div id="disqus_thread"></div>
         <script type="text/javascript">
