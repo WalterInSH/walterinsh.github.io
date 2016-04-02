@@ -4,7 +4,7 @@ title:  Automation
 date:   2015-09-27
 ---
 
-##What is automation?
+## What is automation?
 
 First of all, let's look up the wikipedia. Find out what is "automation"
 
@@ -24,7 +24,7 @@ Is it only the scientists' business?
 
 Why is it so important for everyone, even for ordinary people?
 
-##Everyone can build a automatic system
+## Everyone can build a automatic system
 
 Scientists are insanely brilliant. They may invent some incredible things. But that doesn't mean it's complicated.
 
@@ -50,7 +50,7 @@ Look! This is true automation! It's not as convenience as tap water but it's a m
 
 We need high-techs to be more efficient but it's not necessary to build a automatic system.
 
-##Automation changes our life in many ways
+## Automation changes our life in many ways
 
 As the wikipedia says, many things are using automation everyday.
 
@@ -84,7 +84,7 @@ We pre-set our bank card number shortcut on iPhone. When I need to repeatedly fi
 
 We invented these tools cuz someone found out they're repeatedly doing things. Fortunately we can do the same thing without inventing tools. Those tools are already there and out-of-the-box. Google and your friends would be your best resources to learn these tools.
 
-##Invent a brand-new automatic system
+## Invent a brand-new automatic system
 
 We cannot always find a perfect tool to implement our plan. If you're happen to be an engineer, why don't you build one?
 

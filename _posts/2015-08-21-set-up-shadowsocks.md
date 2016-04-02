@@ -2,11 +2,13 @@
 layout: post
 title:  快速搭建 Shadowsocks
 date:   2015-08-21
+rmdtext: 重新认识全栈工程师
+rmdurl: /2016/01/16/full-stack-engineer.html
 ---
 
 本文介绍如何搭建科学上网利器 Shadowsocks。
 
-###Step 1 购买VPS(virtual private server)
+### Step 1 购买VPS(virtual private server)
 
 我选用的是Digital ocean新加坡的机器，每月5刀，速度足够了。
 
@@ -16,7 +18,7 @@ date:   2015-08-21
 
 记住IP，下文用ADDRESS-IP表示
 
-###Step 2 VPS安装Docker
+### Step 2 VPS安装Docker
 
 {% highlight Bash shell %}
 yum install -y docker
@@ -24,7 +26,7 @@ yum install -y docker
 systemctl start docker
 {% endhighlight %}
 
-###Step 3 VPS安装 shadowsocks-libev
+### Step 3 VPS安装 shadowsocks-libev
 
 {% highlight Bash shell %}
 docker run -p 8388:8388 -e "PASSWORD=YOUR-PASSWORD" vimagick/shadowsocks-libev
@@ -32,9 +34,9 @@ docker run -p 8388:8388 -e "PASSWORD=YOUR-PASSWORD" vimagick/shadowsocks-libev
 
 用一个自己的密码将命令中的YOUR-PASSWORD替换掉，之后我们会用到这个密码
 
-###Step 4 本地安装Client
+### Step 4 本地安装Client
 
-####Linux
+#### Linux
 
 {% highlight Bash shell %}
 git clone git@github.com:shadowsocks/shadowsocks-libev.git
@@ -46,13 +48,13 @@ sudo apt-get install build-essential autoconf libtool libssl-dev
 sudo make install
 {% endhighlight %}
 
-####Mac OSX
+#### Mac OSX
 
 安装 ShadowsocksX
 
-###Step 5 启动Client
+### Step 5 启动Client
 
-####Linux
+#### Linux
 
 {% highlight Bash shell %}
 nohup ss-local -s "ADDRESS-IP" -p "8388" -l "8388" -m "aes-256-cfb" -k "YOUR-PASSWORD" >/dev/null 2>&1 &
@@ -60,11 +62,11 @@ nohup ss-local -s "ADDRESS-IP" -p "8388" -l "8388" -m "aes-256-cfb" -k "YOUR-PAS
 
 用你之前设置的密码替换YOUR-PASSWORD，用购买droplet时的IP替换ADDRESS-IP
 
-####Mac OSX
+#### Mac OSX
 
 按照要求填写信息，密码就是之前设置的，IP地址是你之前购买droplet的地址，端口是8388
 
-###Step 6 在Chrome中安装Proxy SwitchySharp
+### Step 6 在Chrome中安装Proxy SwitchySharp
 
 前往[这里](https://chrome.google.com/webstore/detail/proxy-switchysharp/dpplabbmogkhghncfbfdeeokoefdjegm)安装Proxy SwitchySharp
 
@@ -77,7 +79,7 @@ Switch Rules tab中 Online Rule List 中粘贴地址 https://autoproxy-gfwlist.g
 
 这样基本就可以上你想上的网站了，更多Proxy SwitchySharp的使用技巧请进一步Google。
 
-###Step 6(optional) 安装proxychains
+### Step 6(optional) 安装proxychains
 
 proxychains可以方便你在命令行使用shadowsocks。
 

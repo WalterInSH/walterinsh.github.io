@@ -1,6 +1,7 @@
 _site
 .sass-cache
 bower_components/
+.idea/
 #### joe made this: http://goel.io/joe
 
 #####=== OSX ===#####
