@@ -21,6 +21,16 @@ layout: base
         {% endif %}
         </span>
       </p>
+        {% if page.rmdtext%}
+        <div class="ui segments">
+            <div class="ui segment">
+                <p>读前推荐</p>
+            </div>
+            <div class="ui secondary segment">
+                <p>{{ page.rmdtext}} </p><a href="{{page.rmdurl}}" target="_blank">试试这篇博客</a>
+            </div>
+        </div>
+        {% endif %}
       {% if page.tags and page.tags.size > 0 %}
         <p class="post-tag-container">
             {% for tag in page.tags %}

@@ -2,6 +2,8 @@
 layout: post
 title:  经济学通识读后感
 date:   2015-10-31
+rmdtext: 一本可以预测中国股市未来的书
+rmdurl: 2015/04/15/the-great-game-review.html
 ---
 
 如果一年只能推荐一本书，那我今年一定会推荐《经济学通识》这本书！

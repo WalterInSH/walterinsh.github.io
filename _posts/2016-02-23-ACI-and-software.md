@@ -2,6 +2,8 @@
 layout: post
 title:  Air Crash Investigation 和软件开发
 date:   2016-02-23
+rmdtext: 想要方便的增加Cron Job
+rmdurl: /2016/01/14/use-whenever.html
 ---
 
 这篇blog的是我两年前在看完Air crash investigation这部纪录片后的所思所想，早想拿出来写写，一直未得空，最近三哥邀我去交流经验，不如趁机写写。
