@@ -10,7 +10,7 @@ paginate: 5
 paginate_path: "page:num"
 # Build settings
 markdown: redcarpet
-highlighter: pygments
+highlighter: rouge
 sass:
   sass_dir: _sass
   style: :compressed
@@ -23,3 +23,6 @@ exclude:
   - bower_components
   - README.md
 full_name: Walter Zhang
+gems:
+  - redcarpet
+  - jekyll-paginate
