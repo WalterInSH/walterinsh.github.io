@@ -9,7 +9,6 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 paginate: 5
 paginate_path: "page:num"
 # Build settings
-markdown: redcarpet
 highlighter: rouge
 sass:
   sass_dir: _sass
