@@ -4,5 +4,3 @@ title: About
 color: indigo
 permalink: /about/
 ---
-
-Building
