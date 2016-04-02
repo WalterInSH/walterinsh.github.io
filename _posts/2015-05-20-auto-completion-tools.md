@@ -4,7 +4,7 @@ title: 各种自动补全工具汇总
 date:   2015-05-20
 ---
 
-###fuzzy bash completion
+### fuzzy bash completion
 
 [Github](https://github.com/mgalgs/fuzzy_bash_completion)
 
@@ -42,7 +42,7 @@ echo "set show-all-if-ambiguous on" >> ~/.inputrc
 source ~/.bashrc
 {% endhighlight %}
 
-###maven bash completion
+### maven bash completion
 [Github](https://github.com/juven/maven-bash-completion)
 
 这个项目是为Maven补全命令的. 作者是《Maven实战》的作者.
@@ -63,7 +63,7 @@ echo "source $(pwd)/bash_completion.bash" >> ~/.bashrc
 source ~/.bashrc
 {% endhighlight %}
 
-###Gradle Dependencies Helper Plugin
+### Gradle Dependencies Helper Plugin
 
 [Github](https://github.com/ligi/GradleDependenciesHelperPlugin)
 

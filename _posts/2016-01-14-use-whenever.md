@@ -6,13 +6,13 @@ date:   2016-01-14
 
 [Whenever](https://github.com/javan/whenever)是一个生成cron job的一个ruby工具，最大的优点是可读性很强，特别是对于不常写cron job，原生语法记不住的工程师，让你告别数星星查手册。
 
-###安装
+### 安装
 
 {% highlight Bash shell %}
 sudo gem install whenever
 {% endhighlight %}
 
-###使用
+### 使用
 
 创建一个config/schedule.rb文件
 
@@ -47,7 +47,7 @@ crontab -l
 # End Whenever generated tasks for: job-name
 {% endhighlight %}
 
-###更多例子
+### 更多例子
 
 为了更好的说明它的可读性，以下列举一些从官方找到的例子
 

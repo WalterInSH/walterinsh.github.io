@@ -7,7 +7,7 @@ date:   2015-02-06
 Docker使用了linux中的cgroup来实现container的资源管理, 限制一个container使用多少资源(eg. cpu).
 本文简述docker中cgroup的使用并简要介绍cgroup.
 
-##如何限制Docker container的资源
+## 如何限制Docker container的资源
 
 答案很简单,Docker 的run命令提供了启动时设置资源限制，以内存为例(可以通过-c参数限制cpu),我们限制这个container只能使用10M内存.
 
@@ -55,7 +55,7 @@ total_unevictable 0
 
 我们从这个文件中可以看到关于这个container内存的信息.例如我们启动时设置的最大内存10485760byte(10M).
 
-##什么是cgroups
+## 什么是cgroups
 
 Red Hat Enterprise Linux 6 提供了一个control groups功能，简称cgroups. 允许你给一组进程分配一定的资源，
 例如CPU、内存.你可以监控这一组进程，阻止其访问敏感资源，甚至可以在运行时修改其配置.
@@ -66,7 +66,7 @@ cgroups的设计很像linux进程的设计，结构就像一棵树一样，主�
 但是多个不相关的cgroups层级结构(hierarchies of cgroups)可以同时存在，就像同时有多棵没有关系的树.
 后文中将称每一个这样的cgroups结构为hierarchy.
 
-##subsystems
+## subsystems
 
 cgroups提供了subsystem(resource controllers)作为资源的控制器，Red Hat Enterprise Linux 6提供10种subsystem:
 
@@ -83,7 +83,7 @@ ns - 命名空间
 
 上面memory.stat输出的内容就是memory subsystem提供的
 
-##Subsystems, Hierarchies, Control Groups, Tasks之间的关系
+## Subsystems, Hierarchies, Control Groups, Tasks之间的关系
 
 规则1(图取自官网)  
 cgroups是层级结构的，每个hierarchy都可以有多个subsystem，但是不能有重复的subsystem.
@@ -111,5 +111,5 @@ cgroups是层级结构的，每个hierarchy都可以有多个subsystem，但是�
 可以使用libcgroup和libcgroup-tools,也可以使用systemd或者mount命令管理机器的cgroups,但是更改机器的cgroup配置有可能造成问题,可以在Docker
 container中做实验
 
-##参考  
+## 参考
 [https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Resource_Management_Guide/ch01.html](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/Resource_Management_Guide/ch01.html)
