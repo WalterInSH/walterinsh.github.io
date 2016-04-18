@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  使用Gitlab CI & Docker搭建CI环境
-date:   2016-03-18
+date:   2016-04-18
 rmdtext: 想要方便的增加Cron Job
 rmdurl: /2016/01/14/use-whenever.html
 ---
