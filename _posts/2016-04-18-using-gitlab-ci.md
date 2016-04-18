@@ -6,7 +6,7 @@ rmdtext: 想要方便的增加Cron Job
 rmdurl: /2016/01/14/use-whenever.html
 ---
 
-本文介绍如何使用Gitlab CI和Docker代价一套持续集成环境，虽然并不完美，但是十分简单好用。
+本文介绍如何使用Gitlab CI和Docker搭建一套持续集成环境，虽然并不完美，但是十分简单好用。
 
 ### 安装gitlab runner
 
