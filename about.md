@@ -45,7 +45,11 @@ permalink: /about/
     <!--career-->
     <div class="ui list">
       <div class="item">
-        <div class="header"> 2015.9 - 现在 康大预诊</div>
+        <div class="header"> 2016.6 - 今 爱奇艺</div>
+        安全云
+      </div>
+      <div class="item">
+        <div class="header"> 2015.9 - 2016.5 康大预诊</div>
         数据部门
       </div>
       <div class="item">
