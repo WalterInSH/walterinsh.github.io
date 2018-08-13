@@ -8,10 +8,9 @@ permalink: /about/
   <div class="six wide column">
     <div class="ui card">
       <div class="image">
-        <img src="/images/portrait.png">
       </div>
       <div class="content">
-        <a class="header">张凯</a>
+        <a class="header"></a>
         <div class="meta">
           <span class="date">Born in 1990</span>
         </div>
