@@ -45,18 +45,6 @@ permalink: /about/
     <!--career-->
     <div class="ui list">
       <div class="item">
-        <div class="header"> 2016.6 - 今 爱奇艺</div>
-        安全云
-      </div>
-      <div class="item">
-        <div class="header"> 2015.9 - 2016.5 康大预诊</div>
-        数据部门
-      </div>
-      <div class="item">
-        <div class="header">2013.3 - 2015.9 唯品会</div>
-        用户体系 & 数据应用 & 风控平台
-      </div>
-      <div class="item">
         <div class="header">2012.2 - 2013.2 大谷打工网</div>
         工程师
       </div>
